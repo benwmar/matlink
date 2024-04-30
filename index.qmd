@@ -1,5 +1,5 @@
 ---
-title: "CDC / Jphns Hopkins guide to getting started with OMOP for MATLINK"
+title: "CDC / Johns Hopkins guide to getting started with OMOP for MATLINK"
 date-modified: last-modified
 bibliography: references.bib
 ---
@@ -8,7 +8,7 @@ bibliography: references.bib
 
 This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of MATLINK.
 
-MATLINK is a public health surveillance program designed and developed by the Centers for Disease Control (CDC) to capture real world data (RWD) for tracking....
+MATLINK is a public health surveillance system designed and developed by the Centers for Disease Control and Prevention (CDC) to monitor maternal, infant, and child health outcomes associated with medication for opioid use disorder during pregnancy.
 
 ## Introduction
 
@@ -28,7 +28,7 @@ ETL stands for Extract, Transform, and Load. Essentially this is the process of 
 
 The code for the MATLINK project is hosted on [GitHub](https://github.com/). GitHub is a web-based platform that allows developers to host, review, and collaborate on code repositories. It is widely used for version control and source code management, and it provides features such as issue tracking, wikis, and project management tools to facilitate team collaboration. 
 
-The repository containing the code and concept sets can be accessed at [OHDSI/PHReGWG](https://github.com/OHDSI/PHReGWG) 
+The repository containing the code and concept sets can be accessed at [OHDSI/PHReGWG](https://github.com/OHDSI/PHReGWG)
 
 ## MATLINK technical support checklist
 
@@ -38,11 +38,11 @@ The repository containing the code and concept sets can be accessed at [OHDSI/PH
     -   [Course: Extract, Transform and Load (ehden.eu)](https://academy.ehden.eu/course/view.php?id=7)
 3.  Site confirms that they are using most recent GitHub scripts before proceeding
 4.  Data Quality Dashboard Run
-5. DQD and concept counts approved or issues identified and reviewed with technical team
-6. DQD and concept counts re-run and approved by JHU technical team
-7. Run MATLINK scripts (see OMOP Cohort Creation and De-identification Guide)
-8. De-identified data exported to CSV file
-9. JHU/CDC technical team reviews CSV files before transfer
+5.  DQD and concept counts approved or issues identified and reviewed with technical team
+6.  DQD and concept counts re-run and approved by JHU technical team
+7.  Run MATLINK scripts (see OMOP Cohort Creation and De-identification Guide)
+8.  De-identified data exported to CSV file
+9.  JHU/CDC technical team reviews CSV files before transfer
 10. Any caveats in the data documented in Data Export Cover Sheet
 11. Data transfer arrangements made
 
@@ -128,9 +128,9 @@ The following scripts are to be run on a site's full OMOP dataset in order to pr
 
 **Instructions:** Replace the database name and schema in each of these scripts with your own, then run the cohort creation and deidentification scripts in the following sequence:
 
-01 -- Cohort Creation\...\...\...\...\...\...\...\...\... (Filename: [01_MATLINK_Cohort.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/01_MATLINK_Cohort.sql))
+01 -- Cohort Creation........................... (Filename: [01_MATLINK_Cohort.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/01_MATLINK_Cohort.sql))
 
-02 -- Generate MATLINK Tables\...\...\...\... (Filename: [02_MATLINK_All_Tables.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/02_MATLINK_All_Tables.sql))
+02 -- Generate MATLINK Tables............ (Filename: [02_MATLINK_All_Tables.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/02_MATLINK_All_Tables.sql))
 
 03 -- Deidentify Rare Conditions.......... (Filename: [03_MATLINK_replace_rare_conditions_with_parents.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/03_MATLINK_replace_rare_conditions_with_parents.sql))
 
@@ -140,13 +140,13 @@ The following scripts are to be run on a site's full OMOP dataset in order to pr
 
 06 -- Run Data Quality Checks............. (Filename: [06_DE_ID_Quality_Checks.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/06_DE_ID_Quality_Checks.sql))
 
-07-A -- Profile Conditions\...\...\...\...\...\...\... (Filename: [07_A_condition_profile.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_A_condition_profile.sql))
+07-A -- Profile Conditions..................... (Filename: [07_A_condition_profile.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_A_condition_profile.sql))
 
 07-B -- Profile Measurements............. (Filename: [07_B_measurement_profile.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_B_measurement_profile.sql))
 
 07-C -- Profile Drug Exposure.............. (Filename: [07_C_drug_exposure_profile.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_C_drug_exposure_profile.sql))
 
-07-D -- Profile Unmapped Drugs\...\...\... (Filename: [07_D_review_unmapped_drugs.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_D_review_unmapped_drugs.sql))
+07-D -- Profile Unmapped Drugs......... (Filename: [07_D_review_unmapped_drugs.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_D_review_unmapped_drugs.sql))
 
 07-D -- Profile Devices......................... (Filename: [07_E_device_profile.sql](https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_E_device_profile.sql))
 
@@ -404,8 +404,6 @@ Removal of other identifiers:
 
 **Description**: Device counts are calculated per patient and are aggregated by parent concepts for each device concept present in the final OMOP Device Exposure table.
 
-
-
 ## MATLINK Profile Scripts -- Output & Interpretation
 
 This section provides synthetic examples of the output generated from the MATLINK person measurement drug exposure and device profile SQL scripts as well as examples of how to interpret the output from each script.
@@ -428,7 +426,6 @@ Example Interpretation
 
 The highlighted row shows the distribution of the number of times heart rate was measured per patient in the cohort. 25% of the patients had 17 heart rate measurements or less. 50% of patients had at least 34 heart rate measurements recorded. 75% of patients had at most, 72 heart rate measurements recorded. 95% of patients had at most, 398 heart rate measurements recorded. The four columns can also be interpreted as the median for the bottom 50% (percentile_25), overall median (median), median for the top 50% (percentile_75), and the median for the top 10% (percentile_95) -- in terms of how many times the measurement was taken for each patient in the cohort.
 
-
 ![Profile_script_7B](images/Profile_script_7B.png)
 
 ### 07_C_drug_exposure_profile.sql
@@ -442,7 +439,6 @@ It is important to note that these are *ingredients* - which is why sodium chlor
 
 ![Profile_script_7C](images/Profile_script_7C.png)
 
-
 ### 07_E_device_profile.sql
 
 Generates a table which includes the device concepts included in the cohort and their counts.
@@ -452,9 +448,6 @@ Example Interpretation
 The highlighted row shows that an oxygen nasal cannula device was used for 9,238 patients in the cohort. That patients count represents 44% of the total cohort. Use of this device was recorded an average of 225.3 times per patient, with a maximum of 7,239 recordings for a single patient, when counting all flowsheet entries.
 
 ![Profile_script_7E](images/Profile_script_7E.png)
-
-
-
 
 ## OMOP Table and Field Basics
 
@@ -469,7 +462,7 @@ For the tables of the main domains of the CDM it is imperative that concepts use
 Variable names across all tables follow one convention:
 
 |                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|----------------|--------------------------------------------------------|
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Notation**        | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | \_SOURCE_VALUE      | Verbatim information from the source data, typically used in ETL to map to CONCEPT_ID, and not to be used by any standard analytics. For example, CONDITION_SOURCE_VALUE = '787.02' was the ICD-9 code captured as a diagnosis from the administrative claim.                                                                                                                                                                                     |
 | \_ID                | Unique identifiers for key entities, which can serve as foreign keys to establish relationships across entities. For example, PERSON_ID uniquely identifies each individual. VISIT_OCCURRENCE_ID uniquely identifies a PERSON encounter at a point of care.                                                                                                                                                                                       |
@@ -501,47 +494,28 @@ For more information, see:
 
 [Identifying Oxygen Devices Flowsheet Measures to Map to OMOP Concepts](https://userweb.epic.com/Thread/118440/Identifying-Oxygen-Devices-Flowsheet-Measures-to-Map-to-OMOP/)
 
-# Geocoding and Integrating SDOH Data  
+# Geocoding and Integrating SDOH Data
+
 To link geocoded addresses to the Neighborhood Atlas for getting the Area Deprivation Index (ADI) for patients in a dataset, you will typically follow these steps:
 
-1. Prepare Your Dataset
-Patient Data: Ensure you have a dataset of patients with addresses. This data should be anonymized to protect patient privacy.
-Geocoding: Each address needs to be geocoded. Geocoding is the process of converting addresses into geographic coordinates (latitude and longitude).
-2. Geocoding Addresses
-Use a Geocoding Service: Tools like Google Maps API, ArcGIS, or OpenStreetMap can be used to geocode addresses. This will give you the precise geographic location for each address.
-Accuracy Check: Ensure the geocoding is accurate. Incorrect geocoding can lead to wrong ADI assignments.
-3. Understanding the Neighborhood Atlas
-ADI Overview: The ADI is a measure developed by the Neighborhood Atlas. It provides a ranked and searchable list of neighborhoods according to their level of disadvantage.
-Data Format: Understand the format of the Neighborhood Atlas data. It typically includes geographical identifiers like census tracts.
-4. Linking Geocoded Data to the Neighborhood Atlas
-Match Coordinates with Census Tracts: Use the geographic coordinates to determine the corresponding census tract for each patient. This can be done using GIS software like ArcGIS or QGIS.
-Cross-Reference with ADI Data: Once you have the census tract for each patient, cross-reference these with the Neighborhood Atlas to find the ADI for each tract.
-5. Integrating ADI into Your Dataset
-Add ADI to Patient Records: For each patient, add the ADI corresponding to their census tract. This step integrates socioeconomic context into your patient data.
+1.  Prepare Your Dataset Patient Data: Ensure you have a dataset of patients with addresses. This data should be anonymized to protect patient privacy. Geocoding: Each address needs to be geocoded. Geocoding is the process of converting addresses into geographic coordinates (latitude and longitude).
+2.  Geocoding Addresses Use a Geocoding Service: Tools like Google Maps API, ArcGIS, or OpenStreetMap can be used to geocode addresses. This will give you the precise geographic location for each address. Accuracy Check: Ensure the geocoding is accurate. Incorrect geocoding can lead to wrong ADI assignments.
+3.  Understanding the Neighborhood Atlas ADI Overview: The ADI is a measure developed by the Neighborhood Atlas. It provides a ranked and searchable list of neighborhoods according to their level of disadvantage. Data Format: Understand the format of the Neighborhood Atlas data. It typically includes geographical identifiers like census tracts.
+4.  Linking Geocoded Data to the Neighborhood Atlas Match Coordinates with Census Tracts: Use the geographic coordinates to determine the corresponding census tract for each patient. This can be done using GIS software like ArcGIS or QGIS. Cross-Reference with ADI Data: Once you have the census tract for each patient, cross-reference these with the Neighborhood Atlas to find the ADI for each tract.
+5.  Integrating ADI into Your Dataset Add ADI to Patient Records: For each patient, add the ADI corresponding to their census tract. This step integrates socioeconomic context into your patient data.
 
 ### Geocoding
 
-The primary consideration for linking geospatial data like social determinants of health and environmental risk factors with patient data is protecting PHI when geocoding patient home address and location data. Do not use web-based API services for geocoding as they require patient addresses to be sent to an external server for batch geocoding.
-Geocoding will require software that can match patient addresses to the appropriate shapefiles to determine a precise location and output latitudinal/longitudinal coordinates. Two software solutions for geocoding include:
-- Use ESRI ArcGIS or a similar program that can perform geocoding locally and has all appropriate shapefiles downloaded. This software is expensive, but many institutions have a license already in place.
-- Install geocoding software (ex: open-source, Degauss geocoder: https://www.degauss.org/geocoder) locally via manual installation or by installing a docker container.
+The primary consideration for linking geospatial data like social determinants of health and environmental risk factors with patient data is protecting PHI when geocoding patient home address and location data. Do not use web-based API services for geocoding as they require patient addresses to be sent to an external server for batch geocoding. Geocoding will require software that can match patient addresses to the appropriate shapefiles to determine a precise location and output latitudinal/longitudinal coordinates. Two software solutions for geocoding include: - Use ESRI ArcGIS or a similar program that can perform geocoding locally and has all appropriate shapefiles downloaded. This software is expensive, but many institutions have a license already in place. - Install geocoding software (ex: open-source, Degauss geocoder: https://www.degauss.org/geocoder) locally via manual installation or by installing a docker container.
 
 ### Area Deprivation Index
 
-The Area Deprivation Index (ADI) is based on a measure created by the Health Resources & Services Administration (HRSA) over three decades ago, and has since been refined, adapted, and validated to the Census block group neighborhood level by Amy Kind, MD, PhD and her research team at the University of Wisconsin-Madison. It allows for rankings of neighborhoods by socioeconomic disadvantage in a region of interest (e.g., at the state or national level). It includes factors for the theoretical domains of income, education, employment, and housing quality. It can be used to inform health delivery and policy, especially for the most disadvantaged neighborhood groups. "Neighborhood" is defined as a Census block group.  
+The Area Deprivation Index (ADI) is based on a measure created by the Health Resources & Services Administration (HRSA) over three decades ago, and has since been refined, adapted, and validated to the Census block group neighborhood level by Amy Kind, MD, PhD and her research team at the University of Wisconsin-Madison. It allows for rankings of neighborhoods by socioeconomic disadvantage in a region of interest (e.g., at the state or national level). It includes factors for the theoretical domains of income, education, employment, and housing quality. It can be used to inform health delivery and policy, especially for the most disadvantaged neighborhood groups. "Neighborhood" is defined as a Census block group.\
 from: https://www.neighborhoodatlas.medicine.wisc.edu/
 
 ### ADI as an OHDSI Concept
 
-ADI is not included as an explicit concept in any of the appropriate standard vocabularies. The OHDSI Vocabularies Team recommended that this information be included in the OMOP data as a custom concept in the Observation table. The workflow will be simply to add a line item to the concept mapping table for Area Deprivation Index like the following example:
-concept_id = 2000000999
-concept_code = NA
-concept_name = Area deprivation index
-domain = observation
-vocabulary = Custom
-is_standard = C
-include_descendents = False
-
+ADI is not included as an explicit concept in any of the appropriate standard vocabularies. The OHDSI Vocabularies Team recommended that this information be included in the OMOP data as a custom concept in the Observation table. The workflow will be simply to add a line item to the concept mapping table for Area Deprivation Index like the following example: concept_id = 2000000999 concept_code = NA concept_name = Area deprivation index domain = observation vocabulary = Custom is_standard = C include_descendents = False
 
 # OHDSI Tool Suite
 
@@ -684,4 +658,3 @@ Data Quality Dos and Don'ts
 [OHDSI/Perseus GitHub site](https://github.com/OHDSI/Perseus) OHDSI/Perseus on GitHub
 
 [How to develop capacity for observational research within a health system](https://www.ohdsi.org/2022showcase-79/) Presentation on building capacity from 2022 OHDSI Collaborator Showcase
-
