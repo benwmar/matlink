@@ -5,195 +5,218 @@ bibliography: references.bib
 ---
 
 # Table of Contents
-- [Welcome](#welcome)
-  - [Intro Video](#intro-video)
-  - [MATLINK Program Diagram](#matlink-program-diagram)
-  - [Reference](#reference)
-- [Contact Information](#contact-information)
-- [Meeting Schedule](#meeting-schedule)
-- [REDCap Training Resources](#redcap-training-resources)
-  - [MATLINK-specific REDCap Resources](#matlink-specific-redcap-resources)
-- [Data Content Ontology](#data-content-ontology)
-  - [Overview of Major Clinical Terminologies and Coding Systems](#overview-of-major-clinical-terminologies-and-coding-systems)
-    - [SNOMED Clinical Terms (SNOMED CT)](#snomed-clinical-terms-snomed-ct)
-    - [Logical Observation Identifiers Names and Codes (LOINC)](#logical-observation-identifiers-names-and-codes-loinc)
-    - [RxNorm](#rxnorm)
-    - [International Classification of Disease (ICD)](#international-classification-of-disease-icd)
-    - [Current Procedural Terminology (CPT)](#current-procedural-terminology-cpt)
-    - [Human Phenotype Ontology (HPO)](#human-phenotype-ontology-hpo)
-    - [Unified Medical Language System (UMLS)](#unified-medical-language-system-umls)
-    - [Ontology Mapping in BioPortal Applications](#ontology-mapping-in-bioportal-applications)
-  - [OMOP Domains by Source to Standard Vocabulary](#omop-domains-by-source-to-standard-vocabulary)
-- [Welcome to OMOP for MATLINK Users](#welcome-to-omop-for-matlink-users)
-  - [Introduction](#introduction)
-    - [What is a Common Data Model?](#what-is-a-common-data-model)
-    - [What is an ETL?](#what-is-an-etl)
-  - [Getting Started](#getting-started)
-  - [MATLINK Technical Support Checklist](#matlink-technical-support-checklist)
-  - [OMOP Extract, Transform, and Load Guide](#omop-extract-transform-and-load-guide)
-    - [OHDSI ETL Resources](#ohdsi-etl-resources)
-    - [OHDSI ETL Steps](#ohdsi-etl-steps)
-- [OMOP Table and Field Basics](#omop-table-and-field-basics)
-  - [Tables](#tables)
-  - [Fields](#fields)
-- [MATLINK Concept Mapping Support](#matlink-concept-mapping-support)
-- [Identifying Oxygen Devices in Epic/Clarity](#identifying-oxygen-devices-in-epicclarity)
-- [Geocoding and Integrating SDOH Data](#geocoding-and-integrating-sdoh-data)
-  - [Geocoding](#geocoding)
-  - [Area Deprivation Index](#area-deprivation-index)
-  - [ADI as an OHDSI Concept](#adi-as-an-ohdsi-concept)
-- [OHDSI Tool Suite](#ohdsi-tool-suite)
-  - [Ways to Deploy the Software](#ways-to-deploy-the-software)
-    - [OHDSI Specific](#ohdsi-specific)
-    - [The ETL Process](#the-etl-process)
-    - [ATLAS and Cohort Discovery](#atlas-and-cohort-discovery)
-    - [Broadsea](#broadsea)
-    - [Data Analysis](#data-analysis)
-- [OMOP Scripts for Epic](#omop-scripts-for-epic)
-- [Using Synthetic Data](#using-synthetic-data)
-- [Useful Resources](#useful-resources)
 
+-   [Welcome](#welcome)
+    -   [Intro Video](#intro-video)
+    -   [MATLINK Program Diagram](#matlink-program-diagram)
+    -   [Reference](#reference)
+-   [Contact Information](#contact-information)
+-   [Meeting Schedule](#meeting-schedule)
+-   [REDCap Training Resources](#redcap-training-resources)
+    -   [MATLINK-specific REDCap Resources](#matlink-specific-redcap-resources)
+-   [Data Content Ontology](#data-content-ontology)
+    -   [Overview of Major Clinical Terminologies and Coding Systems](#overview-of-major-clinical-terminologies-and-coding-systems)
+        -   [SNOMED Clinical Terms (SNOMED CT)](#snomed-clinical-terms-snomed-ct)
+        -   [Logical Observation Identifiers Names and Codes (LOINC)](#logical-observation-identifiers-names-and-codes-loinc)
+        -   [RxNorm](#rxnorm)
+        -   [International Classification of Disease (ICD)](#international-classification-of-disease-icd)
+        -   [Current Procedural Terminology (CPT)](#current-procedural-terminology-cpt)
+        -   [Human Phenotype Ontology (HPO)](#human-phenotype-ontology-hpo)
+        -   [Unified Medical Language System (UMLS)](#unified-medical-language-system-umls)
+        -   [Ontology Mapping in BioPortal Applications](#ontology-mapping-in-bioportal-applications)
+    -   [OMOP Domains by Source to Standard Vocabulary](#omop-domains-by-source-to-standard-vocabulary)
+-   [Welcome to OMOP for MATLINK Users](#welcome-to-omop-for-matlink-users)
+    -   [Introduction](#introduction)
+        -   [What is a Common Data Model?](#what-is-a-common-data-model)
+        -   [What is an ETL?](#what-is-an-etl)
+    -   [Getting Started](#getting-started)
+    -   [MATLINK Technical Support Checklist](#matlink-technical-support-checklist)
+    -   [OMOP Extract, Transform, and Load Guide](#omop-extract-transform-and-load-guide)
+        -   [OHDSI ETL Resources](#ohdsi-etl-resources)
+        -   [OHDSI ETL Steps](#ohdsi-etl-steps)
+-   [OMOP Table and Field Basics](#omop-table-and-field-basics)
+    -   [Tables](#tables)
+    -   [Fields](#fields)
+-   [MATLINK Concept Mapping Support](#matlink-concept-mapping-support)
+-   [Identifying Oxygen Devices in Epic/Clarity](#identifying-oxygen-devices-in-epicclarity)
+-   [Geocoding and Integrating SDOH Data](#geocoding-and-integrating-sdoh-data)
+    -   [Geocoding](#geocoding)
+    -   [Area Deprivation Index](#area-deprivation-index)
+    -   [ADI as an OHDSI Concept](#adi-as-an-ohdsi-concept)
+-   [OHDSI Tool Suite](#ohdsi-tool-suite)
+    -   [Ways to Deploy the Software](#ways-to-deploy-the-software)
+        -   [OHDSI Specific](#ohdsi-specific)
+        -   [The ETL Process](#the-etl-process)
+        -   [ATLAS and Cohort Discovery](#atlas-and-cohort-discovery)
+        -   [Broadsea](#broadsea)
+        -   [Data Analysis](#data-analysis)
+-   [OMOP Scripts for Epic](#omop-scripts-for-epic)
+-   [Using Synthetic Data](#using-synthetic-data)
+-   [Useful Resources](#useful-resources)
 
-# Welcome
+# Welcome {#welcome}
 
-## INTRO VIDEO, KHYZER AND PAUL:  NEED A PLACE TO STORE THE VIDEO -- TOO LARGE FOR GITHUB
+## INTRO VIDEO, KHYZER AND PAUL: NEED A PLACE TO STORE THE VIDEO -- TOO LARGE FOR GITHUB
 
 ## DIAGRAM OF MATLINK program?
 
-
 ## Background
-Miele K, Kim SY, Jones R, et al. Medication for Opioid Use Disorder During Pregnancy — Maternal and Infant Network to Understand Outcomes Associated with Use of Medication for Opioid Use Disorder During Pregnancy (MAT-LINK), 2014–2021. MMWR Surveill Summ 2023;72(No. SS-3):1–14. [DOI: http://dx.doi.org/10.15585/mmwr.ss7203a1](http://dx.doi.org/10.15585/mmwr.ss7203a1). [https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm](https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm)
 
-## CONTACT INFORMATION:  roles and what they do
-## Meeting schedule
+Miele K, Kim SY, Jones R, et al. Medication for Opioid Use Disorder During Pregnancy — Maternal and Infant Network to Understand Outcomes Associated with Use of Medication for Opioid Use Disorder During Pregnancy (MAT-LINK), 2014–2021. MMWR Surveill Summ 2023;72(No. SS-3):1–14. [DOI: http://dx.doi.org/10.15585/mmwr.ss7203a1](http://dx.doi.org/10.15585/mmwr.ss7203a1). <https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm>
+
+## CONTACT INFORMATION: roles and what they do
+
+## Meeting schedule {#meeting-schedule}
 
 ## REdCAP Training Resouces
 
-## MATLINK-specific REDCap resources, FAqs  - TBD
+## MATLINK-specific REDCap resources, FAqs - TBD
 
+# Data Content Ontology {#data-content-ontology}
 
-# Data Content Ontology
 ![Dr. Rachel Richesson presents "Learning to Use EHR Data in Learning Health Systems"](https://img.youtube.com/vi/4uXqNLsiVuc/maxresdefault.jpg)
 
-## Overview of Major Clinical Terminologies and Coding Systems
+## Overview of Major Clinical Terminologies and Coding Systems {#overview-of-major-clinical-terminologies-and-coding-systems}
 
 This document provides a detailed overview of several essential clinical terminologies and coding systems used in healthcare. Each system has a specific role and is crucial for standardized communication in healthcare settings. The information includes development history, usage, and updates of these systems.
 
 For more in-depth information, links to the respective official websites are provided.
 
-### SNOMED Clinical Terms (SNOMED CT)
-- **Development:** Originally by the College of American Pathologists, now under SNOMED International.
-- **Adoption:** Used in over 50 countries.
-- **Concepts:** Over 340,000 active concepts in 19 hierarchies.
-- **Usage:** Encodes clinical information including diseases, findings, and procedures.
-- **Updates:** Biannual, with more frequent updates planned.
-- **More Information:** [SNOMED International](https://www.snomed.org/snomed-ct)
+### SNOMED Clinical Terms (SNOMED CT) {#snomed-clinical-terms-snomed-ct}
 
-### Logical Observation Identifiers Names and Codes (LOINC)
-- **Developer:** Regenstrief Institute.
-- **Function:** Identifiers for laboratory and clinical observations.
-- **Content:** Over 90,000 terms.
-- **Collaboration:** With SNOMED CT for coded content development.
-- **Updates:** Biannual.
-- **More Information:** [LOINC](https://loinc.org)
+-   **Development:** Originally by the College of American Pathologists, now under SNOMED International.
+-   **Adoption:** Used in over 50 countries.
+-   **Concepts:** Over 340,000 active concepts in 19 hierarchies.
+-   **Usage:** Encodes clinical information including diseases, findings, and procedures.
+-   **Updates:** Biannual, with more frequent updates planned.
+-   **More Information:** [SNOMED International](https://www.snomed.org/snomed-ct)
 
-### RxNorm
-- **Developer:** National Library of Medicine (NLM).
-- **Function:** Standard nomenclature for medications.
-- **Integration:** Links to various drug vocabularies.
-- **Access:** Requires UMLS user license for proprietary content.
-- **More Information:** [RxNorm - NLM](https://www.nlm.nih.gov/research/umls/rxnorm)
+### Logical Observation Identifiers Names and Codes (LOINC) {#logical-observation-identifiers-names-and-codes-loinc}
 
-### International Classification of Disease (ICD)
-- **Endorsement:** World Health Organization (WHO).
-- **Versions:** ICD-10 widely used with national extensions; ICD-11 adopted for future use.
-- **Purpose:** Epidemiology, health management, clinical purposes.
-- **Updates:** Annual, freely available.
-- **More Information:** [WHO ICD](https://www.who.int/classifications/icd)
+-   **Developer:** Regenstrief Institute.
+-   **Function:** Identifiers for laboratory and clinical observations.
+-   **Content:** Over 90,000 terms.
+-   **Collaboration:** With SNOMED CT for coded content development.
+-   **Updates:** Biannual.
+-   **More Information:** [LOINC](https://loinc.org)
 
-### Current Procedural Terminology (CPT)
-- **Developer:** American Medical Association (AMA).
-- **Use:** Encoding of medical services and procedures in the USA.
-- **Categories:** Three categories of codes.
-- **Requirement:** License from AMA for use.
-- **More Information:** [CPT - AMA](https://www.ama-assn.org/practice-management/cpt)
+### RxNorm {#rxnorm}
 
-### Human Phenotype Ontology (HPO)
-- **Function:** Bioinformatic resources for human diseases and phenotypes analysis.
-- **Components:** Phenotype vocabulary, disease-phenotype annotations, algorithms.
-- **Applications:** Genomic interpretation, gene-disease discovery, precision medicine.
-- **Content:** Over 13,000 terms in 5 hierarchies.
-- **Availability:** Freely available, multiple releases per year.
-- **More Information:** [Human Phenotype Ontology](https://hpo.jax.org)
+-   **Developer:** National Library of Medicine (NLM).
+-   **Function:** Standard nomenclature for medications.
+-   **Integration:** Links to various drug vocabularies.
+-   **Access:** Requires UMLS user license for proprietary content.
+-   **More Information:** [RxNorm - NLM](https://www.nlm.nih.gov/research/umls/rxnorm)
 
-### Unified Medical Language System (UMLS)
-- **Initiation:** By the US National Library of Medicine in 1986.
-- **Goal:** To aid in the retrieval and integration of electronic biomedical information.
-- **Challenge Addressed:** Different vocabularies expressing the same information differently.
-- **Availability:** Free, but requires a license due to additional licensing requirements of some contents.
-- **More Information:** [UMLS - NLM](https://www.nlm.nih.gov/research/umls)
+### International Classification of Disease (ICD) {#international-classification-of-disease-icd}
 
-### Ontology Mapping in BioPortal Applications
-- **Process:** Finding the closest match of a code from one ontology in another.
-- **Matching:** Exact equivalence is rare; approximate matching is common.
-- **Challenges:** Labor-intensive and requires understanding the maps' nature and limitations.
-- **Alternative Approach:** Mapping multiple ontologies to a central core terminology, as used by the OHDSI consortium.
-- **More Information:** [BioPortal](https://bioportal.bioontology.org)
+-   **Endorsement:** World Health Organization (WHO).
+-   **Versions:** ICD-10 widely used with national extensions; ICD-11 adopted for future use.
+-   **Purpose:** Epidemiology, health management, clinical purposes.
+-   **Updates:** Annual, freely available.
+-   **More Information:** [WHO ICD](https://www.who.int/classifications/icd)
 
-    <div style="text-align: right"><a href="#table-of-contents">Back to Table of Contents</a></div>
+### Current Procedural Terminology (CPT) {#current-procedural-terminology-cpt}
+
+-   **Developer:** American Medical Association (AMA).
+-   **Use:** Encoding of medical services and procedures in the USA.
+-   **Categories:** Three categories of codes.
+-   **Requirement:** License from AMA for use.
+-   **More Information:** [CPT - AMA](https://www.ama-assn.org/practice-management/cpt)
+
+### Human Phenotype Ontology (HPO) {#human-phenotype-ontology-hpo}
+
+-   **Function:** Bioinformatic resources for human diseases and phenotypes analysis.
+-   **Components:** Phenotype vocabulary, disease-phenotype annotations, algorithms.
+-   **Applications:** Genomic interpretation, gene-disease discovery, precision medicine.
+-   **Content:** Over 13,000 terms in 5 hierarchies.
+-   **Availability:** Freely available, multiple releases per year.
+-   **More Information:** [Human Phenotype Ontology](https://hpo.jax.org)
+
+### Unified Medical Language System (UMLS) {#unified-medical-language-system-umls}
+
+-   **Initiation:** By the US National Library of Medicine in 1986.
+-   **Goal:** To aid in the retrieval and integration of electronic biomedical information.
+-   **Challenge Addressed:** Different vocabularies expressing the same information differently.
+-   **Availability:** Free, but requires a license due to additional licensing requirements of some contents.
+-   **More Information:** [UMLS - NLM](https://www.nlm.nih.gov/research/umls)
+
+### Ontology Mapping in BioPortal Applications {#ontology-mapping-in-bioportal-applications}
+
+-   **Process:** Finding the closest match of a code from one ontology in another.
+
+-   **Matching:** Exact equivalence is rare; approximate matching is common.
+
+-   **Challenges:** Labor-intensive and requires understanding the maps' nature and limitations.
+
+-   **Alternative Approach:** Mapping multiple ontologies to a central core terminology, as used by the OHDSI consortium.
+
+-   **More Information:** [BioPortal](https://bioportal.bioontology.org)
+
+    ::: {style="text-align: right"}
+    <a href="#table-of-contents">Back to Table of Contents</a>
+    :::
 
 https://www.healthit.gov/isa/section-i-vocabularycode-setterminology-standards-and-implementation-specifications
 
-## OMOP Domains by Source to Standard Vocabulary
-```mermaid
+## OMOP Domains by Source to Standard Vocabulary {#omop-domains-by-source-to-standard-vocabulary}
+
+``` mermaid
 graph LR
     ICD9("ICD9") -->|Transformation to OMOP CDM| SNOMED("STANDARD<br>Vocabulary Concept Code<br>SNOMED")
     ICD10("ICD10") -->|Transformation to OMOP CDM| SNOMED
 ```
-<div style="text-align: right"><a href="#table-of-contents">Back to Table of Contents</a></div>
 
+::: {style="text-align: right"}
+<a href="#table-of-contents">Back to Table of Contents</a>
+:::
 
-| Domain                    | Source Vocabulary              | Standard Vocabulary       |
-|---------------------------|--------------------------------|---------------------------|
-| Conditions                | ICD9, ICD10                    | SNOMED                    |
-| Measurements              | LOINC or institutional specific codes | LOINC               |
-| Drugs                     | NDC                            | RxNORM                    |
-| Procedures                | ICD9, ICD10, CPT               | SNOMED                    |   |
+| Domain       | Source Vocabulary                     | Standard Vocabulary |
+|--------------|---------------------------------------|---------------------|
+| Conditions   | ICD9, ICD10                           | SNOMED              |
+| Measurements | LOINC or institutional specific codes | LOINC               |
+| Drugs        | NDC                                   | RxNORM              |
+| Procedures   | ICD9, ICD10, CPT                      | SNOMED              |
 
-* ICD = International Classification of Diseases
-* SNOMED = Systematized Nomenclature of Medicine
-* LOINC = Logical Observation Identifiers Names and Codes
-* NDC = National Drug Code
-* CPT = Current Procedural Terminology
+-   ICD = International Classification of Diseases
 
-  <div style="text-align: right"><a href="#table-of-contents">Back to Table of Contents</a></div>
+-   SNOMED = Systematized Nomenclature of Medicine
 
+-   LOINC = Logical Observation Identifiers Names and Codes
 
-## Welcome to OMOP for MATLINK users
+-   NDC = National Drug Code
+
+-   CPT = Current Procedural Terminology
+
+    ::: {style="text-align: right"}
+    <a href="#table-of-contents">Back to Table of Contents</a>
+    :::
+
+## Welcome to OMOP for MATLINK users {#welcome-to-omop-for-matlink-users}
 
 This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of MATLINK.
 
 MATLINK is a public health surveillance system designed and developed by the Centers for Disease Control and Prevention (CDC) to monitor maternal, infant, and child health outcomes associated with medication for opioid use disorder during pregnancy.
 
-## Introduction
+## Introduction {#introduction}
 
 The goals of OMOP are to gain better understanding of human health by improving our ability to analyze observational health data.
 
 Health data is stored by individual health systems in unique ways which limits the ability to collaborate and learn from larger populations. This is a problem because certain clinical conditions are infrequent and it is important to have sufficient number of cases to perform statistical tests. De-identified data shared across institutions has the promise of allowing scientists to develop important insights about health which is the motivation to enable greater collaboration.
 
-#### What is a common data model?
+#### What is a common data model? {#what-is-a-common-data-model}
 
 A common data model (CDM) allows multiple health care systems with their individual databases to join forces creating greater populations which can power more compelling scientific studies. A simple way to think about this is the difficulty of finding the silverware drawer in a new kitchen -- if there is a unifying rule for where the silverware drawer is located in every kitchen (immediately to right of the sink) it makes it possible to find this much easier. A common data model creates a system so that data elements like "systolic blood pressure" or "sepsis" are recorded and organized in the same way. OMOP stands for Observational Medical Outcomes Partnership and is the common data model of the [Observational Health Data Sciences and Informatics](https://www.ohdsi.org/) program.
 
-#### What is an ETL?
+#### What is an ETL? {#what-is-an-etl}
 
 ETL stands for Extract, Transform, and Load. Essentially this is the process of mapping data from one system to another. Please see \[The Book of OHDSI, Chapter 6\] (https://ohdsi.github.io/TheBookOfOhdsi/ExtractTransformLoad.html).
 
-## Getting started
+## Getting started {#getting-started}
 
-The code for the MATLINK project is hosted on [GitHub]XXXX
+The code for the MATLINK project is hosted on \[GitHub\]XXXX
 
-## MATLINK technical support checklist
+## MATLINK technical support checklist {#matlink-technical-support-checklist}
 
 1.  Core site team identified and technical kickoff call scheduled
 2.  Members of core team complete the following free EHDEN academy courses:
@@ -209,9 +232,9 @@ The code for the MATLINK project is hosted on [GitHub]XXXX
 10. Any caveats in the data documented in Data Export Cover Sheet
 11. Data transfer arrangements made
 
-## OMOP Extract, Transform, and Load Guide
+## OMOP Extract, Transform, and Load Guide {#omop-extract-transform-and-load-guide}
 
-### [OHDSI ETL Resources]{.underline}
+### [OHDSI ETL Resources]{.underline} {#ohdsi-etl-resources}
 
 -   [OHDSI Wiki: ETL Creation Best Practices](https://www.ohdsi.org/web/wiki/doku.php?id=documentation:etl_best_practices)
 -   [Book of OHDSI (Ch. 6): Extract Transform Load](Book%20of%20OHDSI%20-%20Ch.6%20Extract%20Transform%20Load)
@@ -219,7 +242,7 @@ The code for the MATLINK project is hosted on [GitHub]XXXX
 -   [EHDEN Academy: Extract, Transform and Load](https://academy.ehden.eu/course/view.php?id=7)
 -   [EHDEN Academy: Introduction to Usagi & Code Mappings for an ETL](https://academy.ehden.eu/enrol/index.php?id=18)
 
-### [OHDSI ETL Steps]{.underline}
+### [OHDSI ETL Steps]{.underline} {#ohdsi-etl-steps}
 
 1.  **Find your people.**
 
@@ -279,18 +302,17 @@ The MATLINK support team is here to help you. We also encourage you to connect w
 
 -   OHDSI Forums: https://forums.ohdsi.org/
 
--   OHDSI Workgroups: https://www.ohdsi.org/workgroups/
-```
+-   OHDSI Workgroups: https://www.ohdsi.org/workgroups/ \`\`\`
 
-## OMOP Table and Field Basics
+## OMOP Table and Field Basics {#omop-table-and-field-basics}
 
-Adapted from OHDSI CDM Site: [Data Model Conventions](https://ohdsi.github.io/CommonDataModel/dataModelConventions.html) 
+Adapted from OHDSI CDM Site: [Data Model Conventions](https://ohdsi.github.io/CommonDataModel/dataModelConventions.html)
 
-#### Tables
+#### Tables {#tables}
 
 For the tables of the main domains of the CDM it is imperative that concepts used are strictly limited to the domain. For example, the CONDITION_OCCURRENCE table contains only information about conditions (diagnoses, signs, symptoms), but no information about procedures. Not all source coding schemes adhere to such rules. For example, ICD-9-CM codes, which contain mostly diagnoses of human disease, also contain information about the status of patients having received a procedure. The ICD-9-CM code V20.3 'Newborn health supervision' defines a continuous procedure and is therefore stored in the PROCEDURE_OCCURRENCE table.
 
-#### Fields
+#### Fields {#fields}
 
 Variable names across all tables follow one convention:
 
@@ -307,11 +329,11 @@ For more information, see:
 
 [Data Model Conventions](https://ohdsi.github.io/CommonDataModel/dataModelConventions.html#Data_Model_Conventions)
 
-[How to Calculate Drug Dose](https://ohdsi.github.io/CommonDataModel/drug_dose.html) 
+[How to Calculate Drug Dose](https://ohdsi.github.io/CommonDataModel/drug_dose.html)
 
-[Clinical Data Tables](https://ohdsi.github.io/CommonDataModel/cdm53.html#Clinical_Data_Tables) 
+[Clinical Data Tables](https://ohdsi.github.io/CommonDataModel/cdm53.html#Clinical_Data_Tables)
 
-# MATLINK Concept Mapping Support
+# MATLINK Concept Mapping Support {#matlink-concept-mapping-support}
 
 ![](images/CureID_Concept_Mapping_Process.png)
 
@@ -323,11 +345,11 @@ For more information, see:
 
 3.  All concepts currently identified by the work between CureID staff and each site, and all corresponding descendant concepts are exported from ATLAS as .json or .csv files for use in cohort creation, profiling, and clinical registry submission.
 
-# Identifying Oxygen Devices in Epic/Clarity
+# Identifying Oxygen Devices in Epic/Clarity {#identifying-oxygen-devices-in-epicclarity}
 
 [Identifying Oxygen Devices Flowsheet Measures to Map to OMOP Concepts](https://userweb.epic.com/Thread/118440/Identifying-Oxygen-Devices-Flowsheet-Measures-to-Map-to-OMOP/)
 
-# Geocoding and Integrating SDOH Data
+# Geocoding and Integrating SDOH Data {#geocoding-and-integrating-sdoh-data}
 
 To link geocoded addresses to the Neighborhood Atlas for getting the Area Deprivation Index (ADI) for patients in a dataset, you will typically follow these steps:
 
@@ -337,20 +359,20 @@ To link geocoded addresses to the Neighborhood Atlas for getting the Area Depriv
 4.  Linking Geocoded Data to the Neighborhood Atlas Match Coordinates with Census Tracts: Use the geographic coordinates to determine the corresponding census tract for each patient. This can be done using GIS software like ArcGIS or QGIS. Cross-Reference with ADI Data: Once you have the census tract for each patient, cross-reference these with the Neighborhood Atlas to find the ADI for each tract.
 5.  Integrating ADI into Your Dataset Add ADI to Patient Records: For each patient, add the ADI corresponding to their census tract. This step integrates socioeconomic context into your patient data.
 
-### Geocoding
+### Geocoding {#geocoding}
 
 The primary consideration for linking geospatial data like social determinants of health and environmental risk factors with patient data is protecting PHI when geocoding patient home address and location data. Do not use web-based API services for geocoding as they require patient addresses to be sent to an external server for batch geocoding. Geocoding will require software that can match patient addresses to the appropriate shapefiles to determine a precise location and output latitudinal/longitudinal coordinates. Two software solutions for geocoding include: - Use ESRI ArcGIS or a similar program that can perform geocoding locally and has all appropriate shapefiles downloaded. This software is expensive, but many institutions have a license already in place. - Install geocoding software (ex: open-source, Degauss geocoder: https://www.degauss.org/geocoder) locally via manual installation or by installing a docker container.
 
-### Area Deprivation Index
+### Area Deprivation Index {#area-deprivation-index}
 
 The Area Deprivation Index (ADI) is based on a measure created by the Health Resources & Services Administration (HRSA) over three decades ago, and has since been refined, adapted, and validated to the Census block group neighborhood level by Amy Kind, MD, PhD and her research team at the University of Wisconsin-Madison. It allows for rankings of neighborhoods by socioeconomic disadvantage in a region of interest (e.g., at the state or national level). It includes factors for the theoretical domains of income, education, employment, and housing quality. It can be used to inform health delivery and policy, especially for the most disadvantaged neighborhood groups. "Neighborhood" is defined as a Census block group.\
 from: https://www.neighborhoodatlas.medicine.wisc.edu/
 
-### ADI as an OHDSI Concept
+### ADI as an OHDSI Concept {#adi-as-an-ohdsi-concept}
 
 ADI is not included as an explicit concept in any of the appropriate standard vocabularies. The OHDSI Vocabularies Team recommended that this information be included in the OMOP data as a custom concept in the Observation table. The workflow will be simply to add a line item to the concept mapping table for Area Deprivation Index like the following example: concept_id = 2000000999 concept_code = NA concept_name = Area deprivation index domain = observation vocabulary = Custom is_standard = C include_descendents = False
 
-# OHDSI Tool Suite
+# OHDSI Tool Suite {#ohdsi-tool-suite}
 
 The Edge Tool Suite are a set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM. This work was funded by the MATLINK initiative <https://cure.ncats.io>
 
@@ -366,9 +388,7 @@ The OHDSI open source software configured for deployment include:
 
 -   The Perseus ETL management system
 
-
-
-#### Ways to deploy the software
+#### Ways to deploy the software {#ways-to-deploy-the-software}
 
 1.  Cloud vendor software configured for use.
 
@@ -382,7 +402,7 @@ The OHDSI open source software configured for deployment include:
 
 3.  Sites can compile the tools from the source repositories
 
-#### OHDSI Specific
+#### OHDSI Specific {#ohdsi-specific}
 
 <https://github.com/OHDSI/CommonDataModel>
 
@@ -390,7 +410,7 @@ The OHDSI open source software configured for deployment include:
 
 <https://github.com/OHDSI/Athena>
 
-#### The ETL Process
+#### The ETL Process {#the-etl-process}
 
 <https://github.com/OHDSI/Perseus>
 
@@ -398,17 +418,17 @@ The OHDSI open source software configured for deployment include:
 
 <https://github.com/OHDSI/Usagi>
 
-#### ATLAS and Cohort Discovery
+#### ATLAS and Cohort Discovery {#atlas-and-cohort-discovery}
 
 <https://github.com/OHDSI/Atlas>
 
 <https://github.com/OHDSI/WebAPI>
 
-#### Broadsea
+#### Broadsea {#broadsea}
 
 <https://www.youtube.com/watch?v=a9ZJURNRbUg>
 
-#### Data Analysis
+#### Data Analysis {#data-analysis}
 
 <https://github.com/OHDSI/Achilles>
 
@@ -416,13 +436,13 @@ The OHDSI open source software configured for deployment include:
 
 <https://github.com/OHDSI/DataQualityDashboard>
 
-# OMOP Scripts for Epic
+# OMOP Scripts for Epic {#omop-scripts-for-epic}
 
 ["The Spectrum Code"](https://userweb.epic.com/User/788dbdff-6712-4b16-aabc-98cdb1be4ff9): scripts and documentation created by Roger Carlson at Corewell Health
 
 [RUMC OMOP transition scripts from Clarity, Caboodle](https://userweb.epic.com/User/788dbdff-6712-4b16-aabc-98cdb1be4ff9): Code created by Rush University Medical Center
 
-# Using synthetic data
+# Using synthetic data {#using-synthetic-data}
 
 [MIMIC-IV](https://physionet.org/content/mimic-iv-demo-omop/0.9/1_omop_data_csv/#files-panel) 100-patient demo dataset based on MIMIC to create a OMOP instance
 
@@ -430,7 +450,7 @@ The OHDSI open source software configured for deployment include:
 
 [Eunomia](https://ohdsi.github.io/Eunomia/) LInk to the Eunomia GitHub.io site with instructions and standard dataset files
 
-# Useful Resources
+# Useful Resources {#useful-resources}
 
 [Web site for the OHDSI community](https://www.ohdsi.org/): http://www.ohdsi.org
 
