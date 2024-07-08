@@ -1,2 +1,2 @@
-# cureid.github.io
-This is the GitHub documentation site for the CURE ID project
+# 
+This is the GitHub documentation site for the MAT-Link project
