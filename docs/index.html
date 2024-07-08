@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.5.47">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MATLINK - CDC / Johns Hopkins guide to getting started with OMOP for MATLINK</title>
+<title>CDC / Johns Hopkins Technical Guide to Getting Started with MATLINK – MATLINK</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -45,7 +45,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,6 +60,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -68,31 +75,31 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">MATLINK</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -105,7 +112,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of Contents</a></li>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome</a>
+  <ul class="collapse">
+  <li><a href="#intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github" id="toc-intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github" class="nav-link" data-scroll-target="#intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github">INTRO VIDEO, KHYZER AND PAUL: NEED A PLACE TO STORE THE VIDEO – TOO LARGE FOR GITHUB</a></li>
+  <li><a href="#diagram-of-matlink-program" id="toc-diagram-of-matlink-program" class="nav-link" data-scroll-target="#diagram-of-matlink-program">DIAGRAM OF MATLINK program?</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#contact-information-roles-and-what-they-do" id="toc-contact-information-roles-and-what-they-do" class="nav-link" data-scroll-target="#contact-information-roles-and-what-they-do">CONTACT INFORMATION: roles and what they do</a></li>
+  <li><a href="#meeting-schedule" id="toc-meeting-schedule" class="nav-link" data-scroll-target="#meeting-schedule">Meeting schedule</a></li>
+  <li><a href="#redcap-training-resouces" id="toc-redcap-training-resouces" class="nav-link" data-scroll-target="#redcap-training-resouces">REdCAP Training Resouces</a></li>
+  <li><a href="#matlink-specific-redcap-resources-faqs---tbd" id="toc-matlink-specific-redcap-resources-faqs---tbd" class="nav-link" data-scroll-target="#matlink-specific-redcap-resources-faqs---tbd">MATLINK-specific REDCap resources, FAqs - TBD</a></li>
+  </ul></li>
+  <li><a href="#data-content-ontology" id="toc-data-content-ontology" class="nav-link" data-scroll-target="#data-content-ontology">Data Content Ontology</a>
+  <ul class="collapse">
+  <li><a href="#overview-of-major-clinical-terminologies-and-coding-systems" id="toc-overview-of-major-clinical-terminologies-and-coding-systems" class="nav-link" data-scroll-target="#overview-of-major-clinical-terminologies-and-coding-systems">Overview of Major Clinical Terminologies and Coding Systems</a>
+  <ul class="collapse">
+  <li><a href="#snomed-clinical-terms-snomed-ct" id="toc-snomed-clinical-terms-snomed-ct" class="nav-link" data-scroll-target="#snomed-clinical-terms-snomed-ct">SNOMED Clinical Terms (SNOMED CT)</a></li>
+  <li><a href="#logical-observation-identifiers-names-and-codes-loinc" id="toc-logical-observation-identifiers-names-and-codes-loinc" class="nav-link" data-scroll-target="#logical-observation-identifiers-names-and-codes-loinc">Logical Observation Identifiers Names and Codes (LOINC)</a></li>
+  <li><a href="#rxnorm" id="toc-rxnorm" class="nav-link" data-scroll-target="#rxnorm">RxNorm</a></li>
+  <li><a href="#international-classification-of-disease-icd" id="toc-international-classification-of-disease-icd" class="nav-link" data-scroll-target="#international-classification-of-disease-icd">International Classification of Disease (ICD)</a></li>
+  <li><a href="#current-procedural-terminology-cpt" id="toc-current-procedural-terminology-cpt" class="nav-link" data-scroll-target="#current-procedural-terminology-cpt">Current Procedural Terminology (CPT)</a></li>
+  <li><a href="#human-phenotype-ontology-hpo" id="toc-human-phenotype-ontology-hpo" class="nav-link" data-scroll-target="#human-phenotype-ontology-hpo">Human Phenotype Ontology (HPO)</a></li>
+  <li><a href="#unified-medical-language-system-umls" id="toc-unified-medical-language-system-umls" class="nav-link" data-scroll-target="#unified-medical-language-system-umls">Unified Medical Language System (UMLS)</a></li>
+  <li><a href="#ontology-mapping-in-bioportal-applications" id="toc-ontology-mapping-in-bioportal-applications" class="nav-link" data-scroll-target="#ontology-mapping-in-bioportal-applications">Ontology Mapping in BioPortal Applications</a></li>
+  </ul></li>
+  <li><a href="#omop-domains-by-source-to-standard-vocabulary" id="toc-omop-domains-by-source-to-standard-vocabulary" class="nav-link" data-scroll-target="#omop-domains-by-source-to-standard-vocabulary">OMOP Domains by Source to Standard Vocabulary</a></li>
+  <li><a href="#welcome-to-omop-for-matlink-users" id="toc-welcome-to-omop-for-matlink-users" class="nav-link" data-scroll-target="#welcome-to-omop-for-matlink-users">Welcome to OMOP for MATLINK users</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
   <li><a href="#matlink-technical-support-checklist" id="toc-matlink-technical-support-checklist" class="nav-link" data-scroll-target="#matlink-technical-support-checklist">MATLINK technical support checklist</a></li>
@@ -115,15 +147,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ohdsi-etl-steps" id="toc-ohdsi-etl-steps" class="nav-link" data-scroll-target="#ohdsi-etl-steps"><u>OHDSI ETL Steps</u></a></li>
   <li><a href="#places-to-connect" id="toc-places-to-connect" class="nav-link" data-scroll-target="#places-to-connect"><u>Places to Connect</u></a></li>
   </ul></li>
-  <li><a href="#omop-cohort-creation-and-de-identification-guide" id="toc-omop-cohort-creation-and-de-identification-guide" class="nav-link" data-scroll-target="#omop-cohort-creation-and-de-identification-guide">OMOP Cohort Creation and De-identification Guide</a></li>
-  <li><a href="#matlink-profile-scripts-output-interpretation" id="toc-matlink-profile-scripts-output-interpretation" class="nav-link" data-scroll-target="#matlink-profile-scripts-output-interpretation">MATLINK Profile Scripts – Output &amp; Interpretation</a>
-  <ul class="collapse">
-  <li><a href="#a_condition_profile.sql" id="toc-a_condition_profile.sql" class="nav-link" data-scroll-target="#a_condition_profile.sql">07_A_condition_profile.sql</a></li>
-  <li><a href="#b_measurement_profile.sql" id="toc-b_measurement_profile.sql" class="nav-link" data-scroll-target="#b_measurement_profile.sql">07_B_measurement_profile.sql</a></li>
-  <li><a href="#c_drug_exposure_profile.sql" id="toc-c_drug_exposure_profile.sql" class="nav-link" data-scroll-target="#c_drug_exposure_profile.sql">07_C_drug_exposure_profile.sql</a></li>
-  <li><a href="#e_device_profile.sql" id="toc-e_device_profile.sql" class="nav-link" data-scroll-target="#e_device_profile.sql">07_E_device_profile.sql</a></li>
-  </ul></li>
   <li><a href="#omop-table-and-field-basics" id="toc-omop-table-and-field-basics" class="nav-link" data-scroll-target="#omop-table-and-field-basics">OMOP Table and Field Basics</a></li>
+  </ul></li>
   <li><a href="#matlink-concept-mapping-support" id="toc-matlink-concept-mapping-support" class="nav-link" data-scroll-target="#matlink-concept-mapping-support">MATLINK Concept Mapping Support</a></li>
   <li><a href="#identifying-oxygen-devices-in-epicclarity" id="toc-identifying-oxygen-devices-in-epicclarity" class="nav-link" data-scroll-target="#identifying-oxygen-devices-in-epicclarity">Identifying Oxygen Devices in Epic/Clarity</a></li>
   <li><a href="#geocoding-and-integrating-sdoh-data" id="toc-geocoding-and-integrating-sdoh-data" class="nav-link" data-scroll-target="#geocoding-and-integrating-sdoh-data">Geocoding and Integrating SDOH Data</a>
@@ -133,9 +158,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#adi-as-an-ohdsi-concept" id="toc-adi-as-an-ohdsi-concept" class="nav-link" data-scroll-target="#adi-as-an-ohdsi-concept">ADI as an OHDSI Concept</a></li>
   </ul></li>
   <li><a href="#ohdsi-tool-suite" id="toc-ohdsi-tool-suite" class="nav-link" data-scroll-target="#ohdsi-tool-suite">OHDSI Tool Suite</a></li>
-  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
-  <li><a href="#manuscripts" id="toc-manuscripts" class="nav-link" data-scroll-target="#manuscripts">Manuscripts</a></li>
-  <li><a href="#webinars" id="toc-webinars" class="nav-link" data-scroll-target="#webinars">Webinars</a></li>
   <li><a href="#omop-scripts-for-epic" id="toc-omop-scripts-for-epic" class="nav-link" data-scroll-target="#omop-scripts-for-epic">OMOP Scripts for Epic</a></li>
   <li><a href="#using-synthetic-data" id="toc-using-synthetic-data" class="nav-link" data-scroll-target="#using-synthetic-data">Using synthetic data</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful Resources</a></li>
@@ -147,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">CDC / Johns Hopkins guide to getting started with OMOP for MATLINK</h1>
+<h1 class="title">CDC / Johns Hopkins Technical Guide to Getting Started with MATLINK</h1>
 </div>
 
 
@@ -159,17 +181,273 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 30, 2024</p>
+      <p class="date-modified">July 8, 2024</p>
     </div>
   </div>
     
   </div>
   
 
+
 </header>
 
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
+
+<section id="table-of-contents" class="level1">
+<h1>Table of Contents</h1>
+<ul>
+<li><a href="#welcome">Welcome</a>
+<ul>
+<li><a href="#intro-video">Intro Video</a></li>
+<li><a href="#matlink-program-diagram">MATLINK Program Diagram</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+<li><a href="#contact-information">Contact Information</a></li>
+<li><a href="#meeting-schedule">Meeting Schedule</a></li>
+<li><a href="#redcap-training-resources">REDCap Training Resources</a>
+<ul>
+<li><a href="#matlink-specific-redcap-resources">MATLINK-specific REDCap Resources</a></li>
+</ul></li>
+<li><a href="#data-content-ontology">Data Content Ontology</a>
+<ul>
+<li><a href="#overview-of-major-clinical-terminologies-and-coding-systems">Overview of Major Clinical Terminologies and Coding Systems</a>
+<ul>
+<li><a href="#snomed-clinical-terms-snomed-ct">SNOMED Clinical Terms (SNOMED CT)</a></li>
+<li><a href="#logical-observation-identifiers-names-and-codes-loinc">Logical Observation Identifiers Names and Codes (LOINC)</a></li>
+<li><a href="#rxnorm">RxNorm</a></li>
+<li><a href="#international-classification-of-disease-icd">International Classification of Disease (ICD)</a></li>
+<li><a href="#current-procedural-terminology-cpt">Current Procedural Terminology (CPT)</a></li>
+<li><a href="#human-phenotype-ontology-hpo">Human Phenotype Ontology (HPO)</a></li>
+<li><a href="#unified-medical-language-system-umls">Unified Medical Language System (UMLS)</a></li>
+<li><a href="#ontology-mapping-in-bioportal-applications">Ontology Mapping in BioPortal Applications</a></li>
+</ul></li>
+<li><a href="#omop-domains-by-source-to-standard-vocabulary">OMOP Domains by Source to Standard Vocabulary</a></li>
+</ul></li>
+<li><a href="#welcome-to-omop-for-matlink-users">Welcome to OMOP for MATLINK Users</a>
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#what-is-a-common-data-model">What is a Common Data Model?</a></li>
+<li><a href="#what-is-an-etl">What is an ETL?</a></li>
+</ul></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#matlink-technical-support-checklist">MATLINK Technical Support Checklist</a></li>
+<li><a href="#omop-extract-transform-and-load-guide">OMOP Extract, Transform, and Load Guide</a>
+<ul>
+<li><a href="#ohdsi-etl-resources">OHDSI ETL Resources</a></li>
+<li><a href="#ohdsi-etl-steps">OHDSI ETL Steps</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#omop-table-and-field-basics">OMOP Table and Field Basics</a>
+<ul>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#fields">Fields</a></li>
+</ul></li>
+<li><a href="#matlink-concept-mapping-support">MATLINK Concept Mapping Support</a></li>
+<li><a href="#identifying-oxygen-devices-in-epicclarity">Identifying Oxygen Devices in Epic/Clarity</a></li>
+<li><a href="#geocoding-and-integrating-sdoh-data">Geocoding and Integrating SDOH Data</a>
+<ul>
+<li><a href="#geocoding">Geocoding</a></li>
+<li><a href="#area-deprivation-index">Area Deprivation Index</a></li>
+<li><a href="#adi-as-an-ohdsi-concept">ADI as an OHDSI Concept</a></li>
+</ul></li>
+<li><a href="#ohdsi-tool-suite">OHDSI Tool Suite</a>
+<ul>
+<li><a href="#ways-to-deploy-the-software">Ways to Deploy the Software</a>
+<ul>
+<li><a href="#ohdsi-specific">OHDSI Specific</a></li>
+<li><a href="#the-etl-process">The ETL Process</a></li>
+<li><a href="#atlas-and-cohort-discovery">ATLAS and Cohort Discovery</a></li>
+<li><a href="#broadsea">Broadsea</a></li>
+<li><a href="#data-analysis">Data Analysis</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#omop-scripts-for-epic">OMOP Scripts for Epic</a></li>
+<li><a href="#using-synthetic-data">Using Synthetic Data</a></li>
+<li><a href="#useful-resources">Useful Resources</a></li>
+</ul>
+</section>
+<section id="welcome" class="level1">
+<h1>Welcome</h1>
+<section id="intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github" class="level2">
+<h2 class="anchored" data-anchor-id="intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github">INTRO VIDEO, KHYZER AND PAUL: NEED A PLACE TO STORE THE VIDEO – TOO LARGE FOR GITHUB</h2>
+</section>
+<section id="diagram-of-matlink-program" class="level2">
+<h2 class="anchored" data-anchor-id="diagram-of-matlink-program">DIAGRAM OF MATLINK program?</h2>
+</section>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Miele K, Kim SY, Jones R, et al.&nbsp;Medication for Opioid Use Disorder During Pregnancy — Maternal and Infant Network to Understand Outcomes Associated with Use of Medication for Opioid Use Disorder During Pregnancy (MAT-LINK), 2014–2021. MMWR Surveill Summ 2023;72(No.&nbsp;SS-3):1–14. <a href="http://dx.doi.org/10.15585/mmwr.ss7203a1">DOI: http://dx.doi.org/10.15585/mmwr.ss7203a1</a>. <a href="https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm">https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm</a></p>
+</section>
+<section id="contact-information-roles-and-what-they-do" class="level2">
+<h2 class="anchored" data-anchor-id="contact-information-roles-and-what-they-do">CONTACT INFORMATION: roles and what they do</h2>
+</section>
+<section id="meeting-schedule" class="level2">
+<h2 class="anchored" data-anchor-id="meeting-schedule">Meeting schedule</h2>
+</section>
+<section id="redcap-training-resouces" class="level2">
+<h2 class="anchored" data-anchor-id="redcap-training-resouces">REdCAP Training Resouces</h2>
+</section>
+<section id="matlink-specific-redcap-resources-faqs---tbd" class="level2">
+<h2 class="anchored" data-anchor-id="matlink-specific-redcap-resources-faqs---tbd">MATLINK-specific REDCap resources, FAqs - TBD</h2>
+</section>
+</section>
+<section id="data-content-ontology" class="level1">
+<h1>Data Content Ontology</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://img.youtube.com/vi/4uXqNLsiVuc/maxresdefault.jpg" class="img-fluid figure-img"></p>
+<figcaption>Dr.&nbsp;Rachel Richesson presents “Learning to Use EHR Data in Learning Health Systems”</figcaption>
+</figure>
+</div>
+<section id="overview-of-major-clinical-terminologies-and-coding-systems" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-major-clinical-terminologies-and-coding-systems">Overview of Major Clinical Terminologies and Coding Systems</h2>
+<p>This document provides a detailed overview of several essential clinical terminologies and coding systems used in healthcare. Each system has a specific role and is crucial for standardized communication in healthcare settings. The information includes development history, usage, and updates of these systems.</p>
+<p>For more in-depth information, links to the respective official websites are provided.</p>
+<section id="snomed-clinical-terms-snomed-ct" class="level3">
+<h3 class="anchored" data-anchor-id="snomed-clinical-terms-snomed-ct">SNOMED Clinical Terms (SNOMED CT)</h3>
+<ul>
+<li><strong>Development:</strong> Originally by the College of American Pathologists, now under SNOMED International.</li>
+<li><strong>Adoption:</strong> Used in over 50 countries.</li>
+<li><strong>Concepts:</strong> Over 340,000 active concepts in 19 hierarchies.</li>
+<li><strong>Usage:</strong> Encodes clinical information including diseases, findings, and procedures.</li>
+<li><strong>Updates:</strong> Biannual, with more frequent updates planned.</li>
+<li><strong>More Information:</strong> <a href="https://www.snomed.org/snomed-ct">SNOMED International</a></li>
+</ul>
+</section>
+<section id="logical-observation-identifiers-names-and-codes-loinc" class="level3">
+<h3 class="anchored" data-anchor-id="logical-observation-identifiers-names-and-codes-loinc">Logical Observation Identifiers Names and Codes (LOINC)</h3>
+<ul>
+<li><strong>Developer:</strong> Regenstrief Institute.</li>
+<li><strong>Function:</strong> Identifiers for laboratory and clinical observations.</li>
+<li><strong>Content:</strong> Over 90,000 terms.</li>
+<li><strong>Collaboration:</strong> With SNOMED CT for coded content development.</li>
+<li><strong>Updates:</strong> Biannual.</li>
+<li><strong>More Information:</strong> <a href="https://loinc.org">LOINC</a></li>
+</ul>
+</section>
+<section id="rxnorm" class="level3">
+<h3 class="anchored" data-anchor-id="rxnorm">RxNorm</h3>
+<ul>
+<li><strong>Developer:</strong> National Library of Medicine (NLM).</li>
+<li><strong>Function:</strong> Standard nomenclature for medications.</li>
+<li><strong>Integration:</strong> Links to various drug vocabularies.</li>
+<li><strong>Access:</strong> Requires UMLS user license for proprietary content.</li>
+<li><strong>More Information:</strong> <a href="https://www.nlm.nih.gov/research/umls/rxnorm">RxNorm - NLM</a></li>
+</ul>
+</section>
+<section id="international-classification-of-disease-icd" class="level3">
+<h3 class="anchored" data-anchor-id="international-classification-of-disease-icd">International Classification of Disease (ICD)</h3>
+<ul>
+<li><strong>Endorsement:</strong> World Health Organization (WHO).</li>
+<li><strong>Versions:</strong> ICD-10 widely used with national extensions; ICD-11 adopted for future use.</li>
+<li><strong>Purpose:</strong> Epidemiology, health management, clinical purposes.</li>
+<li><strong>Updates:</strong> Annual, freely available.</li>
+<li><strong>More Information:</strong> <a href="https://www.who.int/classifications/icd">WHO ICD</a></li>
+</ul>
+</section>
+<section id="current-procedural-terminology-cpt" class="level3">
+<h3 class="anchored" data-anchor-id="current-procedural-terminology-cpt">Current Procedural Terminology (CPT)</h3>
+<ul>
+<li><strong>Developer:</strong> American Medical Association (AMA).</li>
+<li><strong>Use:</strong> Encoding of medical services and procedures in the USA.</li>
+<li><strong>Categories:</strong> Three categories of codes.</li>
+<li><strong>Requirement:</strong> License from AMA for use.</li>
+<li><strong>More Information:</strong> <a href="https://www.ama-assn.org/practice-management/cpt">CPT - AMA</a></li>
+</ul>
+</section>
+<section id="human-phenotype-ontology-hpo" class="level3">
+<h3 class="anchored" data-anchor-id="human-phenotype-ontology-hpo">Human Phenotype Ontology (HPO)</h3>
+<ul>
+<li><strong>Function:</strong> Bioinformatic resources for human diseases and phenotypes analysis.</li>
+<li><strong>Components:</strong> Phenotype vocabulary, disease-phenotype annotations, algorithms.</li>
+<li><strong>Applications:</strong> Genomic interpretation, gene-disease discovery, precision medicine.</li>
+<li><strong>Content:</strong> Over 13,000 terms in 5 hierarchies.</li>
+<li><strong>Availability:</strong> Freely available, multiple releases per year.</li>
+<li><strong>More Information:</strong> <a href="https://hpo.jax.org">Human Phenotype Ontology</a></li>
+</ul>
+</section>
+<section id="unified-medical-language-system-umls" class="level3">
+<h3 class="anchored" data-anchor-id="unified-medical-language-system-umls">Unified Medical Language System (UMLS)</h3>
+<ul>
+<li><strong>Initiation:</strong> By the US National Library of Medicine in 1986.</li>
+<li><strong>Goal:</strong> To aid in the retrieval and integration of electronic biomedical information.</li>
+<li><strong>Challenge Addressed:</strong> Different vocabularies expressing the same information differently.</li>
+<li><strong>Availability:</strong> Free, but requires a license due to additional licensing requirements of some contents.</li>
+<li><strong>More Information:</strong> <a href="https://www.nlm.nih.gov/research/umls">UMLS - NLM</a></li>
+</ul>
+</section>
+<section id="ontology-mapping-in-bioportal-applications" class="level3">
+<h3 class="anchored" data-anchor-id="ontology-mapping-in-bioportal-applications">Ontology Mapping in BioPortal Applications</h3>
+<ul>
+<li><p><strong>Process:</strong> Finding the closest match of a code from one ontology in another.</p></li>
+<li><p><strong>Matching:</strong> Exact equivalence is rare; approximate matching is common.</p></li>
+<li><p><strong>Challenges:</strong> Labor-intensive and requires understanding the maps’ nature and limitations.</p></li>
+<li><p><strong>Alternative Approach:</strong> Mapping multiple ontologies to a central core terminology, as used by the OHDSI consortium.</p></li>
+<li><p><strong>More Information:</strong> <a href="https://bioportal.bioontology.org">BioPortal</a></p>
+<div style="text-align: right">
+<a href="#table-of-contents">Back to Table of Contents</a>
+</div></li>
+</ul>
+<p>https://www.healthit.gov/isa/section-i-vocabularycode-setterminology-standards-and-implementation-specifications</p>
+</section>
+</section>
+<section id="omop-domains-by-source-to-standard-vocabulary" class="level2">
+<h2 class="anchored" data-anchor-id="omop-domains-by-source-to-standard-vocabulary">OMOP Domains by Source to Standard Vocabulary</h2>
+<pre class="mermaid"><code>graph LR
+    ICD9("ICD9") --&gt;|Transformation to OMOP CDM| SNOMED("STANDARD&lt;br&gt;Vocabulary Concept Code&lt;br&gt;SNOMED")
+    ICD10("ICD10") --&gt;|Transformation to OMOP CDM| SNOMED</code></pre>
+<div style="text-align: right">
+<a href="#table-of-contents">Back to Table of Contents</a>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 37%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Source Vocabulary</th>
+<th>Standard Vocabulary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Conditions</td>
+<td>ICD9, ICD10</td>
+<td>SNOMED</td>
+</tr>
+<tr class="even">
+<td>Measurements</td>
+<td>LOINC or institutional specific codes</td>
+<td>LOINC</td>
+</tr>
+<tr class="odd">
+<td>Drugs</td>
+<td>NDC</td>
+<td>RxNORM</td>
+</tr>
+<tr class="even">
+<td>Procedures</td>
+<td>ICD9, ICD10, CPT</td>
+<td>SNOMED</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>ICD = International Classification of Diseases</p></li>
+<li><p>SNOMED = Systematized Nomenclature of Medicine</p></li>
+<li><p>LOINC = Logical Observation Identifiers Names and Codes</p></li>
+<li><p>NDC = National Drug Code</p></li>
+<li><p>CPT = Current Procedural Terminology</p>
+<div style="text-align: right">
+<a href="#table-of-contents">Back to Table of Contents</a>
+</div></li>
+</ul>
+</section>
+<section id="welcome-to-omop-for-matlink-users" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-to-omop-for-matlink-users">Welcome to OMOP for MATLINK users</h2>
 <p>This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of MATLINK.</p>
 <p>MATLINK is a public health surveillance system designed and developed by the Centers for Disease Control and Prevention (CDC) to monitor maternal, infant, and child health outcomes associated with medication for opioid use disorder during pregnancy.</p>
 </section>
@@ -188,8 +466,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>The code for the MATLINK project is hosted on <a href="https://github.com/">GitHub</a>. GitHub is a web-based platform that allows developers to host, review, and collaborate on code repositories. It is widely used for version control and source code management, and it provides features such as issue tracking, wikis, and project management tools to facilitate team collaboration.&nbsp;</p>
-<p>The repository containing the code and concept sets can be accessed at <a href="https://github.com/OHDSI/PHReGWG">OHDSI/PHReGWG</a></p>
+<p>The code for the MATLINK project is hosted on [GitHub]XXXX</p>
 </section>
 <section id="matlink-technical-support-checklist" class="level2">
 <h2 class="anchored" data-anchor-id="matlink-technical-support-checklist">MATLINK technical support checklist</h2>
@@ -294,228 +571,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p>OHDSI.org: https://www.ohdsi.org/</p></li>
 <li><p>OHDSI Wiki: https://www.ohdsi.org/web/wiki/doku.php</p></li>
 <li><p>OHDSI Forums: https://forums.ohdsi.org/</p></li>
-<li><p>OHDSI Workgroups: https://www.ohdsi.org/workgroups/</p></li>
+<li><p>OHDSI Workgroups: https://www.ohdsi.org/workgroups/ ```</p></li>
 </ul>
-</section>
-</section>
-<section id="omop-cohort-creation-and-de-identification-guide" class="level2">
-<h2 class="anchored" data-anchor-id="omop-cohort-creation-and-de-identification-guide">OMOP Cohort Creation and De-identification Guide</h2>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Updated: 7/26/2023</code></pre>
-</div>
-</div>
-<p>The following scripts are to be run on a site’s full OMOP dataset in order to prepare the relevant data for sharing with the VIRUS registry. Each script should be run on the same server as the OMOP data but can be customized to run on the preferred Database and Schema.</p>
-<p><strong>Instructions:</strong> Replace the database name and schema in each of these scripts with your own, then run the cohort creation and deidentification scripts in the following sequence:</p>
-<p>01 – Cohort Creation……………………… (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/01_MATLINK_Cohort.sql">01_MATLINK_Cohort.sql</a>)</p>
-<p>02 – Generate MATLINK Tables………… (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/02_MATLINK_All_Tables.sql">02_MATLINK_All_Tables.sql</a>)</p>
-<p>03 – Deidentify Rare Conditions………. (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/03_MATLINK_replace_rare_conditions_with_parents.sql">03_MATLINK_replace_rare_conditions_with_parents.sql</a>)</p>
-<p>04 – Generate OMOP Tables………….. (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/04_DE_ID_CDM_Table_ddl.sql">04_DE_ID_CDM_Table_ddl.sql</a>)</p>
-<p>05 – Remove Identifiers…………………. (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/05_DE_ID_script.sql">05_DE_ID_script.sql</a>)</p>
-<p>06 – Run Data Quality Checks…………. (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/06_DE_ID_Quality_Checks.sql">06_DE_ID_Quality_Checks.sql</a>)</p>
-<p>07-A – Profile Conditions………………… (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_A_condition_profile.sql">07_A_condition_profile.sql</a>)</p>
-<p>07-B – Profile Measurements…………. (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_B_measurement_profile.sql">07_B_measurement_profile.sql</a>)</p>
-<p>07-C – Profile Drug Exposure………….. (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_C_drug_exposure_profile.sql">07_C_drug_exposure_profile.sql</a>)</p>
-<p>07-D – Profile Unmapped Drugs……… (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_D_review_unmapped_drugs.sql">07_D_review_unmapped_drugs.sql</a>)</p>
-<p>07-D – Profile Devices……………………. (Filename: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_E_device_profile.sql">07_E_device_profile.sql</a>)</p>
-<p><strong>OMOP Cohort Creation and Deidentification Process:</strong></p>
-<section id="cohort-creation-script" class="level4">
-<h4 class="anchored" data-anchor-id="cohort-creation-script"><u>01 – Cohort Creation Script</u></h4>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/01_MATLINK_Cohort.sql">01_MATLINK_Cohort.sql</a></p>
-<p><strong>Purpose</strong>: This script creates a cohort of patients for the MATLINK registry. The patient list is saved in the cohort table, along with other useful data elements.</p>
-<p><strong>Description</strong>: This SQL script creates a cohort of COVID-positive hospitalized patients based on specific criteria. The script performs several steps to identify and filter the patients before finally creating the cohort table. The script sets the context to use a specific database, but the actual name of the database is meant to be provided by the user.</p>
-<p><strong>Steps</strong>:</p>
-<p>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create cohort table.</p>
-<p>2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Identify patients (inpatient and outpatient) with covid positive lab results</p>
-<p>a.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use OMOP concepts that represent the LOINC codes for SARS-COV-2 nucleic acid test</p>
-<p>b.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The concept ids here represent LOINC or SNOMED codes for standard ways to code a lab that is positive.</p>
-<p>3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Identify the first positive covid test per patient (after January 1, 2020).</p>
-<p>4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Limit to covid-positive patients with inpatient encounters.</p>
-<p>5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apply all inclusion/exclusion criteria to identify all patients hospitalized with symptomatic covid-19 up to 21 days after a positive SARS-CoV-2 test or up to 7 days prior to a positive SARS-CoV-2 test</p>
-<p>6)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Find the closest inpatient encounter to first positive SARS-COV-2 test (for patients hospitalized more than once)</p>
-<p>7)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Account for edge cases where patients have two hospitalizations same number of absolute days from SARS-COV-2 test (Ex: Patient hospitalized separately 3 days before and 3 days after SARS-COV-2 test)</p>
-<p>8)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the cohort by adding on birth date and death date</p>
-</section>
-<section id="matlink-tables-script" class="level4">
-<h4 class="anchored" data-anchor-id="matlink-tables-script"><u>02 – MATLINK Tables Script</u></h4>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/02_MATLINK_All_Tables.sql">02_MATLINK_All_Tables.sql</a></p>
-<p><strong>Purpose</strong>: This script takes your OMOP dataset and generates a copy of key tables that have been filtered down to only include people and records related to the MATLINK registry.</p>
-<p><strong>Description</strong>: Creates MATLINK tables from the generated MATLINK cohort.</p>
-<p><strong>Dependencies</strong>: This script depends on MATLINK_Cohort.sql, and must be run after that script completes</p>
-<p><strong>Steps</strong>:</p>
-<p>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Person table</p>
-<p>2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Measurements table</p>
-<p>3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Drug Exposure table</p>
-<p>4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Death table</p>
-<p>5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Observation data</p>
-<p>6)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Procedure Occurrence Table</p>
-<p>7)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Condition Occurrence Table</p>
-<p>8)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Visit Occurrence table</p>
-<p>9)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load Device Exposure tabledb</p>
-</section>
-<section id="replace-rare-conditions-script" class="level4">
-<h4 class="anchored" data-anchor-id="replace-rare-conditions-script"><u>03 – Replace Rare Conditions Script</u></h4>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/03_MATLINK_replace_rare_conditions_with_parents.sql">03_MATLINK_replace_rare_conditions_with_parents.sql</a></p>
-<p><strong>Purpose</strong>: Replace conditions occurring 10 or less times in the dataset with parent concepts that have at least 10 counts</p>
-<p><strong>Dependencies</strong>: This script requires the cohort table built from 01_MATLINK_Cohort.sql, and the data loaded into the Condition Occurrence table built from 02_MATLINK_All_Tables.sql.</p>
-<p><strong>Steps</strong>:</p>
-<p>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Condition roll up: concepts are mapped to their corresponding ancestor concept(s)</p>
-<p>2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create table that counts the ancestor concepts for each original concept</p>
-<p>3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create table that counts the original concepts</p>
-<p>4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filter to only include conditions that have more than 10 counts</p>
-<p>5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get just the most specific condition in the ancestor-descendent hierarchy</p>
-</section>
-<section id="deidentified-data-ddl-script" class="level4">
-<h4 class="anchored" data-anchor-id="deidentified-data-ddl-script"><u>04 – Deidentified Data DDL Script</u></h4>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/04_DE_ID_CDM_Table_ddl.sql">04_DE_ID_CDM_Table_ddl.sql</a></p>
-<p><strong>Purpose</strong>: Generate the necessary tables for the de-identified version of the MATLINK Cohort</p>
-<p><strong>Dependencies</strong>: None</p>
-<p><strong>Customization</strong>: By default, this script will create tables in the Results schema, and will preface the table names with ‘deident,’ however this can be set to whatever value you desire.</p>
-<p><strong>Steps</strong>:</p>
-<p>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the Person table</p>
-<p>2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the Death table</p>
-<p>3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the Visit Occurrence table</p>
-<p>4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the Drug Exposure table</p>
-<p>5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the Device Exposure table</p>
-<p>6)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the Condition Occurrence table</p>
-<p>7)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the Measurement table</p>
-<p>8)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create the Observation table</p>
-</section>
-<section id="deidentification-script" class="level4">
-<h4 class="anchored" data-anchor-id="deidentification-script"><u>05 – Deidentification Script</u></h4>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/05_DE_ID_script.sql">05_DE_ID_script.sql</a></p>
-<p><strong>Purpose</strong>: This script creates a copy of the Cohort and removes identifying characteristics to prepare the data for sharing with the VIRUS registry.</p>
-<p><strong>Dependencies</strong>: This script requires the cohort table built from 01_MATLINK_Cohort.sql, and the data loaded into all tables built from 02_MATLINK_All_Tables.sql, rare conditions replace from 03_MATLINK_replace_rare_conditions_with_parents.sql, and the de-identified OMOP CDM tables generated from 04_DE_ID_CDM_Table_ddl.sql.</p>
-<p><strong>Description</strong>: Run this file to generate a deidentified copy of your target data. Insert your data into the OMOP tables, and de-identify person_id, and date fields using date.shift. (*If a person is 90 years of age or older, assign a random age between 90-99 years.)</p>
-<p><strong>Steps</strong>:</p>
-<p>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use find and replace to set source and target DB and Schema names</p>
-<p>2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load the OMOP Person table, and de-identify</p>
-<p>3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load the OMOP Visit Occurrence table, and de-identify</p>
-<p>4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load the OMOP Condition Occurrence table, and de-identify</p>
-<p>5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load the OMOP Procedure Occurrence table, and de-identify</p>
-<p>6)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load the OMOP Drug Exposure table, and de-identify</p>
-<p>7)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load the OMOP Observation table, and de-identify</p>
-<p>8)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load the OMOP Death table, and de-identify</p>
-<p>9)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Load the OMOP Device Exposure table, and de-identify</p>
-<p>10)&nbsp;&nbsp; Load the OMOP Measurement table, and de-identify</p>
-<p>Reassignment of Person IDs:</p>
-<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Person IDs are regenerated sequentially from a sorted copy of the Person table. These new Person IDs are carried throughout the CDM to all tables that reference it.</p>
-<p>Date Shifting:</p>
-<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each person is assigned a random date shift value between -186 and +186 days. All dates for that person are then shifted shifted by that amount.</p>
-<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Birthdays: After date shifting a person’s birthday, the day is then set to the first of the new birth month. If the person would be &gt; 89 years old then they are assigned a random birth year that would make them 90-99 years old.</p>
-<p>Date Truncation:</p>
-<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A user-defined Start and End date are used to exclude any date shifted data that falls outside of the target date range (E.G. Procedures, conditions occurrences, etc. Does not include Birthdates).</p>
-<p>Removal of other identifiers:</p>
-<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other potentially identifying datapoints are removed from the dataset such as location_id, provider_id, and care_site_id</p>
-</section>
-<section id="quality-checks-script-optional" class="level4">
-<h4 class="anchored" data-anchor-id="quality-checks-script-optional"><u>06 – Quality Checks Script (optional)</u></h4>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/06_DE_ID_Quality_Checks.sql">06_DE_ID_Quality_Checks.sql</a></p>
-<p><strong>Purpose</strong>: This script checks basic metrics for each table in the deidentified dataset to ensure the previous scripts were successful. This does</p>
-<p><strong>Description</strong>: This script runs a number of summary level quality checks for each table to audit basic data counts and date ranges.</p>
-<p><strong>Dependencies</strong>: This script requires the populated deidentified OMOP tables generated from the sequence of running:</p>
-<p>01_MATLINK_Cohort.sql,</p>
-<p>02_MATLINK_All_Tables.sql,</p>
-<p>03_MATLINK_replace_rare_conditions_with_parents.sql,</p>
-<p>04_DE_ID_CDM_Table_ddl.sql,</p>
-<p>05_DE_ID_script.sql</p>
-<p><strong>Steps</strong>:</p>
-<p>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Count distinct person_ids and find the maximum and minimum birthdates in the OMOP Person table.</p>
-<p>2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Count distinct person_ids in the OMOP Death table.</p>
-<p>3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Count distinct person_ids, count number of records per observation_concept_id, and find the maximum and minimum observation dates for all records in the OMOP Observation table.</p>
-<p>4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Count distinct person_ids, count number of records per procedure_concept_id, and find the maximum and minimum procedure dates for all records in the OMOP Procedure Occurrence table.</p>
-<p>5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Count distinct person_ids, count number of records per condition_concept_id, and find the maximum and minimum condition dates for all records in the OMOP Condition Occurrence table.</p>
-<p>6)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Count distinct person_ids, count number of records per measurement_concept_id, and find the maximum and minimum measurement dates for all records in the OMOP Measurement table.</p>
-<p>7)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Count distinct person_ids, count number of records per device_concept_id, and find the maximum and minimum device exposure dates for all records in the OMOP Device Exposure table.</p>
-<p>8)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Count distinct person_ids, count number of records per drug_concept_id, and find the maximum and minimum drug exposure dates for all records in the OMOP Drug Exposure table.</p>
-</section>
-<section id="cohort-profile-scripts" class="level4">
-<h4 class="anchored" data-anchor-id="cohort-profile-scripts"><u>07 – Cohort Profile Scripts</u></h4>
-<p><strong>Dependencies</strong>: These scripts require the populated deidentified OMOP tables generated from the sequence of running scripts 1-5:</p>
-<p>01_MATLINK_Cohort.sql,</p>
-<p>02_MATLINK_All_Tables.sql,</p>
-<p>03_MATLINK_replace_rare_conditions_with_parents.sql,</p>
-<p>04_DE_ID_CDM_Table_ddl.sql,</p>
-<p>05_DE_ID_script.sql</p>
-<p>07-A – Condition Profile</p>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_A_condition_profile.sql">07_A_condition_profile.sql</a></p>
-<p><strong>Purpose</strong>: Generate a profile of condition prevalence in the final cohort.</p>
-<p><strong>Description</strong>: Condition counts are calculated per patient and are aggregated by parent concepts for each condition concept present in the final OMOP Condition Occurrence table.</p>
-<p>07-B – Measurement Profile</p>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_B_measurement_profile.sql">07_B_measurement_profile.sql</a></p>
-<p><strong>Purpose</strong>: Generate a profile of measurement prevalence in the final cohort.</p>
-<p><strong>Description</strong>: Measurement counts are calculated per patient and are aggregated by parent concepts for each measurement concept present in the final OMOP Measurement table.</p>
-<p>07-C – Drug Exposure Profile</p>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_C_drug_exposure_profile.sql">07_C_drug_exposure_profile.sql</a></p>
-<p><strong>Purpose</strong>: Generate a profile of drug prevalence in the final cohort.</p>
-<p><strong>Description</strong>: Drug counts are calculated per patient and are aggregated by ingredient for each drug concept present in the final OMOP Drug Exposure table.</p>
-<p>07-D – Unmapped Drugs Profile</p>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_D_review_unmapped_drugs.sql">07_D_review_unmapped_drugs.sql</a></p>
-<p><strong>Purpose</strong>: Generate a profile of drugs that are not mapped to drug_concept_ids in the final cohort.</p>
-<p><strong>Description</strong>: This file filters drugs that were unsuccessfully mapped to a drug_concept_id when running the 02_MATLINK_All_Tables.sql script. Drug source values for which the drug_concept_id is “0” and have at least 20 instances in the final cohort are aggregated for manual review.</p>
-<p>** Drug source values can contain PHI. Please review the output for PHI before sharing.</p>
-<p>07-E – Device Profile</p>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/PHReGWG/blob/main/Cohort%20curation%20scripts/07_E_device_profile.sql">07_E_device_profile.sql</a></p>
-<p><strong>Purpose</strong>: Generate a profile of device prevalence in the final cohort.</p>
-<p><strong>Description</strong>: Device counts are calculated per patient and are aggregated by parent concepts for each device concept present in the final OMOP Device Exposure table.</p>
-</section>
-</section>
-<section id="matlink-profile-scripts-output-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="matlink-profile-scripts-output-interpretation">MATLINK Profile Scripts – Output &amp; Interpretation</h2>
-<p>This section provides synthetic examples of the output generated from the MATLINK person measurement drug exposure and device profile SQL scripts as well as examples of how to interpret the output from each script.</p>
-<section id="a_condition_profile.sql" class="level3">
-<h3 class="anchored" data-anchor-id="a_condition_profile.sql">07_A_condition_profile.sql</h3>
-<p>Generates a table showing condition prevalence in cohort by individual condition concept.</p>
-<p>Example Interpretation</p>
-<p>In the highlighted row, the table shows that 6499 patients in the cohort have a recorded diagnosis of hypertension, representing 58% of the total cohort.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Profile_script_7A.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Profile_script_7A</figcaption>
-</figure>
-</div>
-</section>
-<section id="b_measurement_profile.sql" class="level3">
-<h3 class="anchored" data-anchor-id="b_measurement_profile.sql">07_B_measurement_profile.sql</h3>
-<p>Generates a table which includes the measurement concepts included in the cohort and their names.</p>
-<p>Example Interpretation</p>
-<p>The highlighted row shows the distribution of the number of times heart rate was measured per patient in the cohort. 25% of the patients had 17 heart rate measurements or less. 50% of patients had at least 34 heart rate measurements recorded. 75% of patients had at most, 72 heart rate measurements recorded. 95% of patients had at most, 398 heart rate measurements recorded. The four columns can also be interpreted as the median for the bottom 50% (percentile_25), overall median (median), median for the top 50% (percentile_75), and the median for the top 10% (percentile_95) – in terms of how many times the measurement was taken for each patient in the cohort.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Profile_script_7B.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Profile_script_7B</figcaption>
-</figure>
-</div>
-</section>
-<section id="c_drug_exposure_profile.sql" class="level3">
-<h3 class="anchored" data-anchor-id="c_drug_exposure_profile.sql">07_C_drug_exposure_profile.sql</h3>
-<p>Generates a table of all drugs given in the cohort.</p>
-<p>Example Interpretation</p>
-<p>The highlighted row shows that acetaminophen was administered to 7,937 total patients which represents 68% of the patients in the cohort. Acetaminophen was administered an average of 2 times per patient with the highest recorded value of 26 administrations for a single patient.<br>
-It is important to note that these are <em>ingredients</em> - which is why sodium chloride is the most frequent “drug” because most IV drugs contain sodium chloride as an ingredient.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Profile_script_7C.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Profile_script_7C</figcaption>
-</figure>
-</div>
-</section>
-<section id="e_device_profile.sql" class="level3">
-<h3 class="anchored" data-anchor-id="e_device_profile.sql">07_E_device_profile.sql</h3>
-<p>Generates a table which includes the device concepts included in the cohort and their counts.</p>
-<p>Example Interpretation</p>
-<p>The highlighted row shows that an oxygen nasal cannula device was used for 9,238 patients in the cohort. That patients count represents 44% of the total cohort. Use of this device was recorded an average of 225.3 times per patient, with a maximum of 7,239 recordings for a single patient, when counting all flowsheet entries.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Profile_script_7E.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Profile_script_7E</figcaption>
-</figure>
-</div>
 </section>
 </section>
 <section id="omop-table-and-field-basics" class="level2">
 <h2 class="anchored" data-anchor-id="omop-table-and-field-basics">OMOP Table and Field Basics</h2>
-<p>Adapted from OHDSI CDM Site: <a href="https://ohdsi.github.io/CommonDataModel/dataModelConventions.html">Data Model Conventions</a>&nbsp;</p>
+<p>Adapted from OHDSI CDM Site: <a href="https://ohdsi.github.io/CommonDataModel/dataModelConventions.html">Data Model Conventions</a></p>
 <section id="tables" class="level4">
 <h4 class="anchored" data-anchor-id="tables">Tables</h4>
 <p>For the tables of the main domains of the CDM it is imperative that concepts used are strictly limited to the domain. For example, the CONDITION_OCCURRENCE table contains only information about conditions (diagnoses, signs, symptoms), but no information about procedures. Not all source coding schemes adhere to such rules. For example, ICD-9-CM codes, which contain mostly diagnoses of human disease, also contain information about the status of patients having received a procedure. The ICD-9-CM code V20.3 ‘Newborn health supervision’ defines a continuous procedure and is therefore stored in the PROCEDURE_OCCURRENCE table.</p>
@@ -523,7 +585,7 @@ It is important to note that these are <em>ingredients</em> - which is why sodiu
 <section id="fields" class="level4">
 <h4 class="anchored" data-anchor-id="fields">Fields</h4>
 <p>Variable names across all tables follow one convention:</p>
-<table class="table">
+<table class="caption-top table">
 <tbody>
 <tr class="odd">
 <td><strong>Notation</strong></td>
@@ -553,8 +615,9 @@ It is important to note that these are <em>ingredients</em> - which is why sodiu
 </table>
 <p>For more information, see:</p>
 <p><a href="https://ohdsi.github.io/CommonDataModel/dataModelConventions.html#Data_Model_Conventions">Data Model Conventions</a></p>
-<p><a href="https://ohdsi.github.io/CommonDataModel/drug_dose.html">How to Calculate Drug Dose</a>&nbsp;</p>
-<p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#Clinical_Data_Tables">Clinical Data Tables</a>&nbsp;</p>
+<p><a href="https://ohdsi.github.io/CommonDataModel/drug_dose.html">How to Calculate Drug Dose</a></p>
+<p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#Clinical_Data_Tables">Clinical Data Tables</a></p>
+</section>
 </section>
 </section>
 <section id="matlink-concept-mapping-support" class="level1">
@@ -608,15 +671,6 @@ from: https://www.neighborhoodatlas.medicine.wisc.edu/</p>
 <li><p>The Data Quality Dashboard</p></li>
 <li><p>The Perseus ETL management system</p></li>
 </ul>
-<section id="simplifying-the-etl-process" class="level4">
-<h4 class="anchored" data-anchor-id="simplifying-the-etl-process">Simplifying the ETL process</h4>
-<p>The OHDSI community has created a series of individual software packages to facilitate the ETL from proprietary EHRs to OMOP, evaluate data quality, define cohorts, and perform analyses. The “Edge Tool” packages these individual tools to facilitate the performance of an OMOP ETL and subsequent use of the data for defining cohorts for observational research. In contrast to registry approaches which ingest data represented in various data models and perform data harmonization centrally, software components of the “Edge Tool” facilitate ETL performance locally at the “edge.” This suite of software aims to drastically reduce the labor and effort required to go from “zero to OMOP.” We anticipate that institutions that use the full suite of offered software will be able to reduce the person-hours required for an OMOP ETL to as little as 50 hours.</p>
-</section>
-<section id="software-components" class="level4">
-<h4 class="anchored" data-anchor-id="software-components">Software components</h4>
-<p>The Edge Tool encompasses the Perseus ETL management solution, the HADES R analysis package within an RStudio Server R integrated development environment, and the ATLAS cohort discovery tool with WebAPI web services integration (Figure). The Perseus graphic-user interface (GUI) approach provides source-to-concept mapping for the ETL, with assisted extraction of data from EHR such as flowsheets (vital signs, nursing assessments), test measurements, and diagnoses. Rather than performing a series of SQL queries with wildcards to identify data elements of interest from primary source EHR tables,users may enter desired data element terms into a browser text field which are then matched using term similarity to source table entries.Users may then evaluate the completeness and quality of the ETL using the Data Quality Dashboard which performs &gt;3,000 individual data quality checks on the OMOP-formatted data and is reported through a web-based reporting system.</p>
-<p>In tandem with Perseus, OHDSI HADES and OHDSI ATLAS are the two projects within the Edge Tool that allow for advanced analysis once data has been harmonized with the OMOP CDM, such as generating cohorts for research, patient level prediction, treatment pathways, large scale population analytics, automated reporting and, optionally, participation in OHDSI network studies.The OHDSI applications within the Edge Tool have been containerized using OHDSI Broadsea, allowing for even easier deployment. Current use of the Edge Tool has proven promising and while limitations still exist - e.g., not currently capable of extracting data from unstructured fields such as notes or loose text - further process optimization and tool development will reduce this implementation time and effort further.</p>
-</section>
 <section id="ways-to-deploy-the-software" class="level4">
 <h4 class="anchored" data-anchor-id="ways-to-deploy-the-software">Ways to deploy the software</h4>
 <ol type="1">
@@ -660,24 +714,6 @@ from: https://www.neighborhoodatlas.medicine.wisc.edu/</p>
 <p><a href="https://github.com/OHDSI/DataQualityDashboard" class="uri">https://github.com/OHDSI/DataQualityDashboard</a></p>
 </section>
 </section>
-<section id="best-practices" class="level1">
-<h1>Best Practices</h1>
-<p>Data Quality Dos and Don’ts</p>
-<ul>
-<li><p>Do install the Data Quality Dashboard early on in the process.</p></li>
-<li><p>Don’t include source values in your export.- they might include PHI.</p></li>
-<li><p>Don’t forget to check GitHub for the most recent version of the script before you run it.</p></li>
-<li><p>Don’t send your data to the coordinating center until the tech team has a chance to review it with you in a live session.</p></li>
-</ul>
-</section>
-<section id="manuscripts" class="level1">
-<h1>Manuscripts</h1>
-<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10072311/pdf/cc9-5-e0893.pdf">Heavner SF, Anderson W, Kashyap R, Dasher P, Mathé EA, Merson L, Guerin PJ, Weaver J, Robinson M, Schito M, Kumar VK, Nagy P. A Path to Real-World Evidence in Critical Care Using Open-Source Data Harmonization Tools. Crit Care Explor. 2023 Apr 3;5(4):e0893. doi: 10.1097/CCE.0000000000000893. PMID: 37025303; PMCID: PMC10072311.</a></p>
-</section>
-<section id="webinars" class="level1">
-<h1>Webinars</h1>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/H8Ur1xzVjS0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
 <section id="omop-scripts-for-epic" class="level1">
 <h1>OMOP Scripts for Epic</h1>
 <p><a href="https://userweb.epic.com/User/788dbdff-6712-4b16-aabc-98cdb1be4ff9">“The Spectrum Code”</a>: scripts and documentation created by Roger Carlson at Corewell Health</p>
@@ -705,7 +741,6 @@ from: https://www.neighborhoodatlas.medicine.wisc.edu/</p>
 <p><a href="https://phekb.org/phenotypes">PheKB</a> A phenotype repository</p>
 <p><a href="https://learn.microsoft.com/en-us/azure/architecture/example-scenario/digital-health/patient-data-ohdsi-omop-cdm">Analyze observational patient data by using OHDSI with the OMOP CDM</a> Microsoft guide to OMOP CDM</p>
 <p><a href="https://github.com/microsoft/OHDSIonAzure">OHDSI on Azure GitHub</a> Automation code and documentation for deploying OHDSI CDM in Azure</p>
-<p><a href="https://github.com/OHDSI/Perseus">OHDSI/Perseus GitHub site</a> OHDSI/Perseus on GitHub</p>
 <p><a href="https://www.ohdsi.org/2022showcase-79/">How to develop capacity for observational research within a health system</a> Presentation on building capacity from 2022 OHDSI Collaborator Showcase</p>
 
 
@@ -747,18 +782,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -790,11 +814,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -804,8 +867,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -817,7 +889,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -861,6 +1056,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -886,6 +1082,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -946,6 +1168,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
