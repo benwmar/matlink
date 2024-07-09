@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-07-08">
 
 <title>CDC / Johns Hopkins Technical Guide to Getting Started with MATLINK – MATLINK</title>
 <style>
@@ -112,8 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents">Table of Contents</a></li>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome</a>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
   <ul class="collapse">
   <li><a href="#intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github" id="toc-intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github" class="nav-link" data-scroll-target="#intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github">INTRO VIDEO, KHYZER AND PAUL: NEED A PLACE TO STORE THE VIDEO – TOO LARGE FOR GITHUB</a></li>
   <li><a href="#diagram-of-matlink-program" id="toc-diagram-of-matlink-program" class="nav-link" data-scroll-target="#diagram-of-matlink-program">DIAGRAM OF MATLINK program?</a></li>
@@ -177,13 +177,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-  
     <div>
-    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 8, 2024</p>
+      <p class="date">July 8, 2024</p>
     </div>
   </div>
+  
     
   </div>
   
@@ -192,80 +192,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="table-of-contents" class="level1">
-<h1>Table of Contents</h1>
-<ul>
-<li><p><a href="#welcome">Welcome</a></p>
-<ul>
-<li><a href="#intro-video">Intro Video</a></li>
-<li><a href="#matlink-program-diagram">MATLINK Program Diagram</a></li>
-<li><a href="#reference">Reference</a></li>
-</ul></li>
-<li><p><a href="#contact-information">Contact Information</a></p></li>
-<li><p><a href="#meeting-schedule">Meeting Schedule</a></p></li>
-<li><p><a href="#redcap-training-resources">REDCap Training Resources</a></p>
-<ul>
-<li><a href="#matlink-specific-redcap-resources">MATLINK-specific REDCap Resources</a></li>
-</ul></li>
-<li><p><a href="#data-content-ontology">Data Content Ontology</a></p>
-<ul>
-<li><a href="#overview-of-major-clinical-terminologies-and-coding-systems">Overview of Major Clinical Terminologies and Coding Systems</a>
-<ul>
-<li><a href="#snomed-clinical-terms-snomed-ct">SNOMED Clinical Terms (SNOMED CT)</a></li>
-<li><a href="#logical-observation-identifiers-names-and-codes-loinc">Logical Observation Identifiers Names and Codes (LOINC)</a></li>
-<li><a href="#rxnorm">RxNorm</a></li>
-<li><a href="#international-classification-of-disease-icd">International Classification of Disease (ICD)</a></li>
-<li><a href="#current-procedural-terminology-cpt">Current Procedural Terminology (CPT)</a></li>
-<li><a href="#human-phenotype-ontology-hpo">Human Phenotype Ontology (HPO)</a></li>
-<li><a href="#unified-medical-language-system-umls">Unified Medical Language System (UMLS)</a></li>
-<li><a href="#ontology-mapping-in-bioportal-applications">Ontology Mapping in BioPortal Applications</a></li>
-</ul></li>
-<li><a href="#omop-domains-by-source-to-standard-vocabulary">OMOP Domains by Source to Standard Vocabulary</a></li>
-</ul></li>
-<li><p><a href="#welcome-to-omop-for-matlink-users">Welcome to OMOP for MATLINK Users</a></p>
-<ul>
-<li><a href="#introduction">Introduction</a>
-<ul>
-<li><a href="#what-is-a-common-data-model">What is a Common Data Model?</a></li>
-<li><a href="#what-is-an-etl">What is an ETL?</a></li>
-</ul></li>
-<li><a href="#getting-started">Getting Started</a></li>
-<li><a href="#matlink-technical-support-checklist">MATLINK Technical Support Checklist</a></li>
-<li><a href="#omop-extract-transform-and-load-guide">OMOP Extract, Transform, and Load Guide</a>
-<ul>
-<li><a href="#ohdsi-etl-resources">OHDSI ETL Resources</a></li>
-<li><a href="#ohdsi-etl-steps">OHDSI ETL Steps</a></li>
-</ul></li>
-</ul></li>
-<li><p><a href="#omop-table-and-field-basics">OMOP Table and Field Basics</a></p>
-<ul>
-<li><a href="#tables">Tables</a></li>
-<li><a href="#fields">Fields</a></li>
-</ul></li>
-<li><p><a href="#matlink-concept-mapping-support">MATLINK Concept Mapping Support</a></p></li>
-<li><p><a href="#identifying-oxygen-devices-in-epicclarity">Identifying Oxygen Devices in Epic/Clarity</a></p></li>
-<li><p><a href="#geocoding-and-integrating-sdoh-data">Geocoding and Integrating SDOH Data</a></p>
-<ul>
-<li><a href="#geocoding">Geocoding</a></li>
-<li><a href="#area-deprivation-index">Area Deprivation Index</a></li>
-<li><a href="#adi-as-an-ohdsi-concept">ADI as an OHDSI Concept</a></li>
-</ul></li>
-<li><p><a href="#ohdsi-tool-suite">OHDSI Tool Suite</a></p>
-<ul>
-<li><a href="#ways-to-deploy-the-software">Ways to Deploy the Software</a>
-<ul>
-<li><a href="#ohdsi-specific">OHDSI Specific</a></li>
-<li><a href="#the-etl-process">The ETL Process</a></li>
-<li><a href="#atlas-and-cohort-discovery">ATLAS and Cohort Discovery</a></li>
-<li><a href="#broadsea">Broadsea</a></li>
-<li><a href="#data-analysis">Data Analysis</a></li>
-</ul></li>
-</ul></li>
-<li><p><a href="#omop-scripts-for-epic">OMOP Scripts for Epic</a></p></li>
-<li><p><a href="#using-synthetic-data">Using Synthetic Data</a></p></li>
-<li><p><a href="#useful-resources">Useful Resources</a></p></li>
-</ul>
-</section>
 <section id="welcome" class="level1">
 <h1>Welcome</h1>
 <section id="intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github" class="level2">

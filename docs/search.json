@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CDC / Johns Hopkins Technical Guide to Getting Started with MATLINK",
     "section": "",
-    "text": "Welcome\n\nIntro Video\nMATLINK Program Diagram\nReference\n\nContact Information\nMeeting Schedule\nREDCap Training Resources\n\nMATLINK-specific REDCap Resources\n\nData Content Ontology\n\nOverview of Major Clinical Terminologies and Coding Systems\n\nSNOMED Clinical Terms (SNOMED CT)\nLogical Observation Identifiers Names and Codes (LOINC)\nRxNorm\nInternational Classification of Disease (ICD)\nCurrent Procedural Terminology (CPT)\nHuman Phenotype Ontology (HPO)\nUnified Medical Language System (UMLS)\nOntology Mapping in BioPortal Applications\n\nOMOP Domains by Source to Standard Vocabulary\n\nWelcome to OMOP for MATLINK Users\n\nIntroduction\n\nWhat is a Common Data Model?\nWhat is an ETL?\n\nGetting Started\nMATLINK Technical Support Checklist\nOMOP Extract, Transform, and Load Guide\n\nOHDSI ETL Resources\nOHDSI ETL Steps\n\n\nOMOP Table and Field Basics\n\nTables\nFields\n\nMATLINK Concept Mapping Support\nIdentifying Oxygen Devices in Epic/Clarity\nGeocoding and Integrating SDOH Data\n\nGeocoding\nArea Deprivation Index\nADI as an OHDSI Concept\n\nOHDSI Tool Suite\n\nWays to Deploy the Software\n\nOHDSI Specific\nThe ETL Process\nATLAS and Cohort Discovery\nBroadsea\nData Analysis\n\n\nOMOP Scripts for Epic\nUsing Synthetic Data\nUseful Resources"
+    "text": "Miele K, Kim SY, Jones R, et al. Medication for Opioid Use Disorder During Pregnancy — Maternal and Infant Network to Understand Outcomes Associated with Use of Medication for Opioid Use Disorder During Pregnancy (MAT-LINK), 2014–2021. MMWR Surveill Summ 2023;72(No. SS-3):1–14. DOI: http://dx.doi.org/10.15585/mmwr.ss7203a1. https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm"
   },
   {
     "objectID": "index.html#intro-video-khyzer-and-paul-need-a-place-to-store-the-video-too-large-for-github",
@@ -24,8 +24,8 @@
     "objectID": "index.html#background",
     "href": "index.html#background",
     "title": "CDC / Johns Hopkins Technical Guide to Getting Started with MATLINK",
-    "section": "Background",
-    "text": "Background\nMiele K, Kim SY, Jones R, et al. Medication for Opioid Use Disorder During Pregnancy — Maternal and Infant Network to Understand Outcomes Associated with Use of Medication for Opioid Use Disorder During Pregnancy (MAT-LINK), 2014–2021. MMWR Surveill Summ 2023;72(No. SS-3):1–14. DOI: http://dx.doi.org/10.15585/mmwr.ss7203a1. https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm"
+    "section": "",
+    "text": "Miele K, Kim SY, Jones R, et al. Medication for Opioid Use Disorder During Pregnancy — Maternal and Infant Network to Understand Outcomes Associated with Use of Medication for Opioid Use Disorder During Pregnancy (MAT-LINK), 2014–2021. MMWR Surveill Summ 2023;72(No. SS-3):1–14. DOI: http://dx.doi.org/10.15585/mmwr.ss7203a1. https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm"
   },
   {
     "objectID": "index.html#contact-information-roles-and-what-they-do",
