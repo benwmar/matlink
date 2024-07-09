@@ -15,15 +15,15 @@ toc-title: "On this page"
 
 Miele K, Kim SY, Jones R, et al. Medication for Opioid Use Disorder During Pregnancy — Maternal and Infant Network to Understand Outcomes Associated with Use of Medication for Opioid Use Disorder During Pregnancy (MAT-LINK), 2014–2021. MMWR Surveill Summ 2023;72(No. SS-3):1–14. [DOI: http://dx.doi.org/10.15585/mmwr.ss7203a1](http://dx.doi.org/10.15585/mmwr.ss7203a1). <https://www.cdc.gov/mmwr/volumes/72/ss/ss7203a1.htm>
 
-## CONTACT INFORMATION: roles and what they do
-
 ## Meeting schedule {#meeting-schedule}
 
 ## REdCAP Training Resouces
 
-## MATLINK-specific REDCap resources, FAqs - TBD
+[REDCap training videos](https://projectredcap.org/resources/videos/)
 
-# Data Content Ontology {#data-content-ontology}
+## MATLINK-specific REDCap resources, FAQs - TBD
+
+# Resources to help you on your REDCap journey {#data-content-ontology}
 
 ![Dr. Rachel Richesson presents "Learning to Use EHR Data in Learning Health Systems"](https://img.youtube.com/vi/4uXqNLsiVuc/maxresdefault.jpg)
 
@@ -269,45 +269,6 @@ For more information, see:
 [How to Calculate Drug Dose](https://ohdsi.github.io/CommonDataModel/drug_dose.html)
 
 [Clinical Data Tables](https://ohdsi.github.io/CommonDataModel/cdm53.html#Clinical_Data_Tables)
-
-# MATLINK Concept Mapping Support {#matlink-concept-mapping-support}
-
-![](images/CureID_Concept_Mapping_Process.png)
-
-#### Collaborative OMOP Concept Mapping Process
-
-1.  CureID clinical informaticists work with each site to manually map internal concepts to OMOP concepts outlined for capture in the project plan.
-
-2.  The combined concepts from all sites are maintained as a single, updated concept set using the OHDSI ATLAS open-source tool.
-
-3.  All concepts currently identified by the work between CureID staff and each site, and all corresponding descendant concepts are exported from ATLAS as .json or .csv files for use in cohort creation, profiling, and clinical registry submission.
-
-# Identifying Oxygen Devices in Epic/Clarity {#identifying-oxygen-devices-in-epicclarity}
-
-[Identifying Oxygen Devices Flowsheet Measures to Map to OMOP Concepts](https://userweb.epic.com/Thread/118440/Identifying-Oxygen-Devices-Flowsheet-Measures-to-Map-to-OMOP/)
-
-# Geocoding and Integrating SDOH Data {#geocoding-and-integrating-sdoh-data}
-
-To link geocoded addresses to the Neighborhood Atlas for getting the Area Deprivation Index (ADI) for patients in a dataset, you will typically follow these steps:
-
-1.  Prepare Your Dataset Patient Data: Ensure you have a dataset of patients with addresses. This data should be anonymized to protect patient privacy. Geocoding: Each address needs to be geocoded. Geocoding is the process of converting addresses into geographic coordinates (latitude and longitude).
-2.  Geocoding Addresses Use a Geocoding Service: Tools like Google Maps API, ArcGIS, or OpenStreetMap can be used to geocode addresses. This will give you the precise geographic location for each address. Accuracy Check: Ensure the geocoding is accurate. Incorrect geocoding can lead to wrong ADI assignments.
-3.  Understanding the Neighborhood Atlas ADI Overview: The ADI is a measure developed by the Neighborhood Atlas. It provides a ranked and searchable list of neighborhoods according to their level of disadvantage. Data Format: Understand the format of the Neighborhood Atlas data. It typically includes geographical identifiers like census tracts.
-4.  Linking Geocoded Data to the Neighborhood Atlas Match Coordinates with Census Tracts: Use the geographic coordinates to determine the corresponding census tract for each patient. This can be done using GIS software like ArcGIS or QGIS. Cross-Reference with ADI Data: Once you have the census tract for each patient, cross-reference these with the Neighborhood Atlas to find the ADI for each tract.
-5.  Integrating ADI into Your Dataset Add ADI to Patient Records: For each patient, add the ADI corresponding to their census tract. This step integrates socioeconomic context into your patient data.
-
-### Geocoding {#geocoding}
-
-The primary consideration for linking geospatial data like social determinants of health and environmental risk factors with patient data is protecting PHI when geocoding patient home address and location data. Do not use web-based API services for geocoding as they require patient addresses to be sent to an external server for batch geocoding. Geocoding will require software that can match patient addresses to the appropriate shapefiles to determine a precise location and output latitudinal/longitudinal coordinates. Two software solutions for geocoding include: - Use ESRI ArcGIS or a similar program that can perform geocoding locally and has all appropriate shapefiles downloaded. This software is expensive, but many institutions have a license already in place. - Install geocoding software (ex: open-source, Degauss geocoder: https://www.degauss.org/geocoder) locally via manual installation or by installing a docker container.
-
-### Area Deprivation Index {#area-deprivation-index}
-
-The Area Deprivation Index (ADI) is based on a measure created by the Health Resources & Services Administration (HRSA) over three decades ago, and has since been refined, adapted, and validated to the Census block group neighborhood level by Amy Kind, MD, PhD and her research team at the University of Wisconsin-Madison. It allows for rankings of neighborhoods by socioeconomic disadvantage in a region of interest (e.g., at the state or national level). It includes factors for the theoretical domains of income, education, employment, and housing quality. It can be used to inform health delivery and policy, especially for the most disadvantaged neighborhood groups. "Neighborhood" is defined as a Census block group.\
-from: https://www.neighborhoodatlas.medicine.wisc.edu/
-
-### ADI as an OHDSI Concept {#adi-as-an-ohdsi-concept}
-
-ADI is not included as an explicit concept in any of the appropriate standard vocabularies. The OHDSI Vocabularies Team recommended that this information be included in the OMOP data as a custom concept in the Observation table. The workflow will be simply to add a line item to the concept mapping table for Area Deprivation Index like the following example: concept_id = 2000000999 concept_code = NA concept_name = Area deprivation index domain = observation vocabulary = Custom is_standard = C include_descendents = False
 
 # OHDSI Tool Suite {#ohdsi-tool-suite}
 
