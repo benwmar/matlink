@@ -169,21 +169,7 @@ The code for the MATLINK project is hosted on \[GitHub\]XXXX
 
 ## MATLINK technical support checklist {#matlink-technical-support-checklist}
 
-1.  Core site team identified and technical kickoff call scheduled
-2.  Members of core team complete the following free EHDEN academy courses:
-    -   [Course: OMOP CDM and Standardised Vocabularies (ehden.eu)](https://academy.ehden.eu/course/view.php?id=4)
-    -   [Course: Extract, Transform and Load (ehden.eu)](https://academy.ehden.eu/course/view.php?id=7)
-3.  Site confirms that they are using most recent GitHub scripts before proceeding
-4.  Data Quality Dashboard Run
-5.  DQD and concept counts approved or issues identified and reviewed with technical team
-6.  DQD and concept counts re-run and approved by JHU technical team
-7.  Run MATLINK scripts (see OMOP Cohort Creation and De-identification Guide)
-8.  De-identified data exported to CSV file
-9.  JHU/CDC technical team reviews CSV files before transfer
-10. Any caveats in the data documented in Data Export Cover Sheet
-11. Data transfer arrangements made
-
-## OMOP Extract, Transform, and Load Guide {#omop-extract-transform-and-load-guide}
+1.  **TBD**
 
 ### [OHDSI ETL Resources]{.underline} {#ohdsi-etl-resources}
 
