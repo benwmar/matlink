@@ -42,76 +42,81 @@ This section provides a detailed overview of several essential clinical terminol
 
 For more in-depth information, links to the respective official websites are provided.
 
+Here's the updated markdown with the inclusion of MONDO:
+
+```markdown
 ### SNOMED Clinical Terms (SNOMED CT) {#snomed-clinical-terms-snomed-ct}
 
--   **Development:** Originally by the College of American Pathologists, now under SNOMED International.
--   **Adoption:** Used in over 50 countries.
--   **Concepts:** Over 340,000 active concepts in 19 hierarchies.
--   **Usage:** Encodes clinical information including diseases, findings, and procedures.
--   **Updates:** Biannual, with more frequent updates planned.
--   **More Information:** [SNOMED International](https://www.snomed.org/snomed-ct)
+- **Origin:** Developed by the College of American Pathologists, now under SNOMED International.
+- **Usage:** Used in more than 50 countries to encode clinical information, including diseases, findings, and procedures.
+- **Scope:** More than 340,000 active concepts in 19 hierarchies.
+- **Updates:** Biannual, with more frequent updates planned.
+- **More Information:** [SNOMED International](https://www.snomed.org/snomed-ct)
 
 ### Logical Observation Identifiers Names and Codes (LOINC) {#logical-observation-identifiers-names-and-codes-loinc}
 
--   **Developer:** Regenstrief Institute.
--   **Function:** Identifiers for laboratory and clinical observations.
--   **Content:** Over 90,000 terms.
--   **Collaboration:** With SNOMED CT for coded content development.
--   **Updates:** Biannual.
--   **More Information:** [LOINC](https://loinc.org)
+- **Origin:** Developed by the Regenstrief Institute.
+- **Usage:** Provides identifiers for laboratory and clinical observations.
+- **Scope:** Over 90,000 terms.
+- **Updates:** Biannual, in collaboration with SNOMED CT for coded content development.
+- **More Information:** [LOINC](https://loinc.org)
 
 ### RxNorm {#rxnorm}
 
--   **Developer:** National Library of Medicine (NLM).
--   **Function:** Standard nomenclature for medications.
--   **Integration:** Links to various drug vocabularies.
--   **Access:** Requires UMLS user license for proprietary content.
--   **More Information:** [RxNorm - NLM](https://www.nlm.nih.gov/research/umls/rxnorm)
+- **Origin:** Developed by the National Library of Medicine (NLM).
+- **Usage:** Standard nomenclature for medications, linking to various drug vocabularies.
+- **Access:** Requires UMLS user license for proprietary content.
+- **More Information:** [RxNorm - NLM](https://www.nlm.nih.gov/research/umls/rxnorm)
 
 ### International Classification of Disease (ICD) {#international-classification-of-disease-icd}
 
--   **Endorsement:** World Health Organization (WHO).
--   **Versions:** ICD-10 widely used with national extensions; ICD-11 adopted for future use.
--   **Purpose:** Epidemiology, health management, clinical purposes.
--   **Updates:** Annual, freely available.
--   **More Information:** [WHO ICD](https://www.who.int/classifications/icd)
+- **Origin:** Endorsed by the World Health Organization (WHO).
+- **Usage:** Widely used for epidemiology, health management, and clinical purposes.
+- **Scope:** ICD-10 is widely used with national extensions; ICD-11 is adopted for future use.
+- **Updates:** Annual, freely available.
+- **More Information:** [WHO ICD](https://www.who.int/classifications/icd)
 
 ### Current Procedural Terminology (CPT) {#current-procedural-terminology-cpt}
 
--   **Developer:** American Medical Association (AMA).
--   **Use:** Encoding of medical services and procedures in the USA.
--   **Categories:** Three categories of codes.
--   **Requirement:** License from AMA for use.
--   **More Information:** [CPT - AMA](https://www.ama-assn.org/practice-management/cpt)
+- **Origin:** Developed by the American Medical Association (AMA).
+- **Usage:** Encoding of medical services and procedures in the USA.
+- **Scope:** Contains three categories of codes.
+- **Access:** Requires a license from AMA for use.
+- **More Information:** [CPT - AMA](https://www.ama-assn.org/practice-management/cpt)
 
 ### Human Phenotype Ontology (HPO) {#human-phenotype-ontology-hpo}
 
--   **Function:** Bioinformatic resources for human diseases and phenotypes analysis.
--   **Components:** Phenotype vocabulary, disease-phenotype annotations, algorithms.
--   **Applications:** Genomic interpretation, gene-disease discovery, precision medicine.
--   **Content:** Over 13,000 terms in 5 hierarchies.
--   **Availability:** Freely available, multiple releases per year.
--   **More Information:** [Human Phenotype Ontology](https://hpo.jax.org)
+- **Origin:** Developed as a bioinformatics resource for human diseases and phenotypes analysis.
+- **Usage:** Used in genomic interpretation, gene-disease discovery, and precision medicine.
+- **Scope:** Contains more than 13,000 terms in 5 hierarchies.
+- **Updates:** Freely available, with multiple releases per year.
+- **More Information:** [Human Phenotype Ontology](https://hpo.jax.org)
 
 ### Unified Medical Language System (UMLS) {#unified-medical-language-system-umls}
 
--   **Initiation:** By the US National Library of Medicine in 1986.
--   **Goal:** To aid in the retrieval and integration of electronic biomedical information.
--   **Challenge Addressed:** Different vocabularies expressing the same information differently.
--   **Availability:** Free, but requires a license due to additional licensing requirements of some contents.
--   **More Information:** [UMLS - NLM](https://www.nlm.nih.gov/research/umls)
+- **Origin:** Developed by the US National Library of Medicine in 1986.
+- **Usage:** Facilitates the retrieval and integration of electronic biomedical information.
+- **Scope:** Addresses different vocabularies expressing the same information differently.
+- **Access:** Free, but requires a license due to additional licensing requirements of some contents.
+- **More Information:** [UMLS - NLM](https://www.nlm.nih.gov/research/umls)
 
-### Ontology Mapping in BioPortal Applications {#ontology-mapping-in-bioportal-applications}
 
--   **Process:** Finding the closest match of a code from one ontology in another.
+### Simple Standard for Sharing Ontological Mappings (SSSOM) {#simple-standard-for-sharing-ontological-mappings-sssom}
 
--   **Matching:** Exact equivalence is rare; approximate matching is common.
+- **Origin:** Developed by the scientific community as a lightweight standard for sharing mappings between ontologies.
+- **Usage:** Facilitates the exchange and interoperability of mapping data between different ontologies and vocabularies.
+- **Scope:** Supports a variety of mapping types and includes metadata to describe mappings.
+- **Updates:** Developed collaboratively with input from various stakeholders to ensure broad applicability and utility.
+- **More Information:** [SSSOM GitHub Repository](https://github.com/mapping-commons/sssom)
 
--   **Challenges:** Labor-intensive and requires understanding the maps' nature and limitations.
+### Mondo Disease Ontology (MONDO) {#mondo-disease-ontology-mondo}
 
--   **Alternative Approach:** Mapping multiple ontologies to a central core terminology, as used by the OHDSI consortium.
-
--   **More Information:** [BioPortal](https://bioportal.bioontology.org)
+- **Origin:** Developed by the Monarch Initiative to harmonize disease definitions across resources.
+- **Usage:** Provides a unified disease ontology to support data integration and interoperability.
+- **Scope:** Integrates multiple disease resources into a single ontology with more than 20,000 terms.
+- **Updates:** Regularly updated with contributions from the community.
+- **More Information:** [MONDO GitHub Repository](https://github.com/monarch-initiative/mondo)
+```
 
     ::: {style="text-align: right"}
     <a href="#table-of-contents">Back to Table of Contents</a>
