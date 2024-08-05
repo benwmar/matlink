@@ -23,8 +23,7 @@ Miele K, Kim SY, Jones R, et al. Medication for Opioid Use Disorder During Pregn
 
 ## MATLINK-specific REDCap resources, FAQs - TBD
 
-# Resources to help you on your REDCap journey {#data-content-ontology}
-
+TO BE INCLUDED
 
 ## Overview of Major Clinical Terminologies and Coding Systems {#overview-of-major-clinical-terminologies-and-coding-systems}
 
