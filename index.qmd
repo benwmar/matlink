@@ -40,11 +40,6 @@ This event was originally presented on February 9, 2023, as part of the webinar 
 
 This section provides a detailed overview of several essential clinical terminologies and coding systems used in healthcare. Each system has a specific role and is crucial for standardized communication in healthcare settings. The information includes development history, usage, and updates of these systems.
 
-For more in-depth information, links to the respective official websites are provided.
-
-Here's the updated markdown with the inclusion of MONDO:
-
-```markdown
 ### SNOMED Clinical Terms (SNOMED CT) {#snomed-clinical-terms-snomed-ct}
 
 - **Origin:** Developed by the College of American Pathologists, now under SNOMED International.
